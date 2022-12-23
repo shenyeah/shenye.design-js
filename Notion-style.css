@@ -1,918 +1,3752 @@
-<!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
-<html lang="en">
+:root {
+  --notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont,
+    'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif,
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --fg-color: rgb(55, 53, 47);
+  --fg-color-0: rgba(55, 53, 47, 0.09);
+  --fg-color-1: rgba(55, 53, 47, 0.16);
+  --fg-color-2: rgba(55, 53, 47, 0.4);
+  --fg-color-3: rgba(55, 53, 47, 0.6);
+  --fg-color-4: #000;
+  --fg-color-5: rgba(55, 53, 47, 0.024);
+  --fg-color-6: rgba(55, 53, 47, 0.8);
+  --fg-color-icon: var(--fg-color);
 
-<head>
-    <!-- <link rel="stylesheet" href="./Notion as a Headless CMS_files/global-XLA2XVAO.css"> -->
-    <link rel="stylesheet" href="./Notion as a Headless CMS_files/notion.css">
+  --bg-color: #fff;
+  --bg-color-0: rgba(135, 131, 120, 0.15);
+  --bg-color-1: rgb(247, 246, 243);
+  --bg-color-2: rgba(135, 131, 120, 0.15);
 
+  --select-color-0: rgb(46, 170, 220);
+  --select-color-1: rgba(45, 170, 219, 0.3);
+  --select-color-2: #d9eff8;
 
-<body class="overflow-x-hidden bg-gray-50 font-sans text-gray-900 antialiased">
-    <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
-    <div class="notion notion-app dark-mode notion-block-29292d9cd4fc45bc8ac3ef2774385b28">
-        <div class="notion-viewport"></div>
-        <div class="notion-frame">
-            <header class="notion-header">
-                <div class="notion-nav-header">
-                    <div class="breadcrumbs"><a target="_blank" rel="noopener"
-                            href="https://notion.so/9a6ec2a3dfdf4fca8f434decb3da9ca4"
-                            class="breadcrumb page-link umami--click--https-notion-so-9a6ec2a3dfdf4fca8f434decb3da9ca4">
-                            <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                    class="icon notion-page-icon" role="img" aria-label="🎬">🎬</span></div><span
-                                class="title">7 Scenes — UX.MOVIE</span>
-                        </a><span class="spacer">/</span>
-                        <div class="breadcrumb active">
-                            <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                    class="icon notion-page-icon" role="img" aria-label="🍯">🍯</span></div><span
-                                class="title">Make your Logline sticky
-                                ?</span>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <div class="notion-page-scroller">
-                <div class="notion-page-cover-wrapper"><img class="notion-page-cover" style="object-position:center 50%"
-                        src="https://www.notion.so/image/https:%2F%2Fwww.notion.so%2Fimages%2Fpage-cover%2Fwebb3.jpg?table=block&amp;id=29292d9c-d4fc-45bc-8ac3-ef2774385b28&amp;cache=v2"
-                        alt="Make your Logline sticky ?" loading="lazy" decoding="async" /></div>
-                <main
-                    class="notion-page notion-page-has-cover notion-page-has-icon notion-page-has-text-icon notion-full-page">
-                    <div class="notion-page-icon-hero notion-page-icon-span"><span class="notion-page-icon" role="img"
-                            aria-label="🍯">🍯</span></div>
-                    <h1 class="notion-title">Make your Logline sticky ?</h1>
-                    <div class="notion-collection-page-properties">
-                        <div class="notion-collection-row">
-                            <div class="notion-collection-row-body">
-                                <div class="notion-collection-row-property">
-                                    <div class="notion-collection-column-title"><svg viewBox="0 0 14 14"
-                                            class="notion-collection-column-title-icon">
-                                            <path
-                                                d="M6.986 14c-1.79 0-3.582-.69-4.944-2.068-2.723-2.72-2.723-7.172 0-9.892 2.725-2.72 7.182-2.72 9.906 0A6.972 6.972 0 0114 6.996c0 1.88-.728 3.633-2.052 4.955A7.058 7.058 0 016.986 14zm3.285-6.99v1.645H5.526v-5.47h1.841v3.63h2.904v.194zm1.89-.014c0-1.379-.542-2.67-1.522-3.648-2.006-2.005-5.287-2.007-7.297-.009l-.009.009a5.168 5.168 0 000 7.295c2.01 2.007 5.297 2.007 7.306 0a5.119 5.119 0 001.521-3.647z">
-                                            </path>
-                                        </svg>
-                                        <div class="notion-collection-column-title-body">Last edited</div>
-                                    </div>
-                                    <div class="notion-collection-row-value"><span
-                                            class="notion-property notion-property-last_edited_time">Dec 22, 2022 01:02
-                                            PM</span></div>
-                                </div>
-                                <div class="notion-collection-row-property">
-                                    <div class="notion-collection-column-title"><svg viewBox="0 0 14 14"
-                                            class="notion-collection-column-title-icon">
-                                            <path
-                                                d="M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z">
-                                            </path>
-                                        </svg>
-                                        <div class="notion-collection-column-title-body">Summary</div>
-                                    </div>
-                                    <div class="notion-collection-row-value"><span
-                                            class="notion-property notion-property-text">sdfgsgdsgf</span></div>
-                                </div>
-                                <div class="notion-collection-row-property">
-                                    <div class="notion-collection-column-title"><svg viewBox="0 0 14 14"
-                                            class="notion-collection-column-title-icon">
-                                            <path
-                                                d="M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z">
-                                            </path>
-                                        </svg>
-                                        <div class="notion-collection-column-title-body">Item ID</div>
-                                    </div>
-                                    <div class="notion-collection-row-value"><span
-                                            class="notion-property notion-property-text">63739b0a412e3354dc79c3fa</span>
-                                    </div>
-                                </div>
-                                <div class="notion-collection-row-property">
-                                    <div class="notion-collection-column-title"><svg viewBox="0 0 14 14"
-                                            class="notion-collection-column-title-icon">
-                                            <path
-                                                d="M0 3a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm3-1.5A1.5 1.5 0 001.5 3v8A1.5 1.5 0 003 12.5h8a1.5 1.5 0 001.5-1.5V3A1.5 1.5 0 0011 1.5H3zm-.167 5.316l.566-.542.177-.17.347-.332.346.334.176.17 1.139 1.098 3.699-3.563.177-.17.347-.335.347.334.177.17.563.543.177.171.372.36-.372.36-.177.17-4.786 4.615-.177.171-.347.334-.347-.334-.177-.17-2.23-2.15-.177-.172-.375-.361.376-.36.179-.17z">
-                                            </path>
-                                        </svg>
-                                        <div class="notion-collection-column-title-body">Publish?</div>
-                                    </div>
-                                    <div class="notion-collection-row-value"><span
-                                            class="notion-property notion-property-checkbox">
-                                            <div class="notion-property-checkbox-container"><span
-                                                    class="notion-property notion-property-checkbox">
-                                                    <div class="notion-property-checkbox-checked"><svg
-                                                            viewBox="0 0 14 14">
-                                                            <path d="M5.5 12L14 3.5 12.5 2l-7 7-4-4.003L0 6.499z">
-                                                            </path>
-                                                        </svg></div>
-                                                </span><span class="notion-property-checkbox-text">Publish?</span></div>
-                                        </span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="notion-page-content">
-                        <article class="notion-page-content-inner">
-                            <hr class="notion-hr notion-block-3c21d8a1c0f4419a9052a211116ee0b0" />
-                            <div class="notion-blank notion-block-7ee92143fb30442095236cc5428ae0b5"> </div>
-                            <h4 class="notion-h notion-h3 notion-h-indent-0 notion-block-4423d16bdbbd4bc89db33ba8c9332ea7"
-                                data-id="4423d16bdbbd4bc89db33ba8c9332ea7"
-                                id="if-you-re-reading-this-you-ve-probably-got-a-great-idea-for-a-breakthrough-product-or-solution.-yay-you-but-you-know-what-they-say-right-the-road-to-poor-investments-is-paved-with-good-ideas.-or-wait---is-it-paved-with-good-intentions-either-way-it-pretty-much-leads-to-the-same-place-nowheresville.">
-                                <span>
-                                    <div id="4423d16bdbbd4bc89db33ba8c9332ea7" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link"
-                                        href="#if-you-re-reading-this-you-ve-probably-got-a-great-idea-for-a-breakthrough-product-or-solution.-yay-you-but-you-know-what-they-say-right-the-road-to-poor-investments-is-paved-with-good-ideas.-or-wait---is-it-paved-with-good-intentions-either-way-it-pretty-much-leads-to-the-same-place-nowheresville."
-                                        title="If you’re reading this, you’ve probably got a great idea for a breakthrough product or solution. Yay, you! But you know what they say, right? The road to poor investments is paved with good ideas. Or wait – is it paved with good intentions? Either way, it pretty much leads to the same place: Nowheresville."><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">If you’re reading this, you’ve probably
-                                        got a
-                                        great idea for a breakthrough product or solution. Yay, you! But you know what
-                                        they
-                                        say, right? The road to poor investments is paved with good ideas. Or wait – is
-                                        it
-                                        paved with good intentions? Either way, it pretty much leads to the same place:
-                                        Nowheresville.</span>
-                                </span>
-                            </h4>
-                            <div class="notion-blank notion-block-dbd51240a8d448449a442c25d11c2f70"> </div>
-                            <div
-                                class="notion-callout notion-gray_background_co notion-block-3a3f36e160b0491fa445d87714ecdc74">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="🔥">🔥</span></div>
-                                <div class="notion-callout-text">Alas, many great ideas never see the light of day. They
-                                    never get their chance to shine, to be appreciated, to be loved by their intended
-                                    audience. The truth is, <b>really smart people come up with really smart ideas for
-                                        really smart things that you’ve never even heard of, and never will</b>. Happens
-                                    all
-                                    the time.</div>
-                            </div>
-                            <div class="notion-blank notion-block-f356c3ead4f64098abb15f64a5a93bed"> </div>
-                            <h4 class="notion-h notion-h3 notion-h-indent-0 notion-block-6749cd706ff142faaf7615d317ea3f00"
-                                data-id="6749cd706ff142faaf7615d317ea3f00"
-                                id="if-you-re-smart-and-creative-having-the-ideas-is-kind-of-the-easy-part."><span>
-                                    <div id="6749cd706ff142faaf7615d317ea3f00" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link"
-                                        href="#if-you-re-smart-and-creative-having-the-ideas-is-kind-of-the-easy-part."
-                                        title="If you’re smart and creative, having the ideas is kind of the easy part. "><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">If you’re smart and creative, having the
-                                        ideas is kind of the easy part. </span>
-                                </span></h4>
-                            <div class="notion-row notion-block-7a351956f3114958b59cf42790551031">
-                                <div class="notion-column notion-block-b19e68e946924cada13b611393476d4e"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.25)">
-                                    <div
-                                        class="notion-text notion-yellow notion-block-62fadfa045e44bd792ab277338eaef64">
-                                        <b>You know what’s a lot harder?</b>
-                                    </div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-dbff87c9d88140ba9bcfecee4ceeb3ea"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.75)">
-                                    <div class="notion-text notion-block-fce0d30978ff4ab89911584fac0f5e46">Transforming
-                                        these ideas into something tangible; i.e., building your solution in an
-                                        efficient,
-                                        and hell, even fun, way</div>
-                                    <div class="notion-text notion-block-051ccdbf349b40ebbe64eb7e64058ba4"><span
-                                            class="notion-inline-underscore"><b>And</b></span></div>
-                                    <div class="notion-text notion-block-a387ad108d3448cba11dea04bbf945af">Actually
-                                        attracting the right audience so that your idea can grow into a successful brand
-                                    </div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <h4 class="notion-h notion-h3 notion-h-indent-0 notion-block-830718d4f8564c0d9443a505f6dfee05"
-                                data-id="830718d4f8564c0d9443a505f6dfee05"
-                                id="for-these-two-very-important-things-to-happen"><span>
-                                    <div id="830718d4f8564c0d9443a505f6dfee05" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#for-these-two-very-important-things-to-happen"
-                                        title="For these two very important things to happen,"><svg viewBox="0 0 16 16"
-                                            width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">For these two <span
-                                            class="notion-inline-underscore"><b>very important things</b></span> to
-                                        happen,</span>
-                                </span></h4>
-                            <div class="notion-text notion-block-c0d2af9d09704c37a38f169535203d69">You’ve got to be able
-                                to
-                                tell the story of your idea in a way that will:</div>
-                            <div class="notion-row notion-block-68b3ac9349af4450bacef1128a7378bd">
-                                <div class="notion-column notion-block-0600ba2749784b40b5d4ae7b231a26b7"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5625)">
-                                    <div class="notion-text notion-block-aff0f631688745c0b13272a174139e44">
-                                        <div class="notion-text-children">
-                                            <div class="notion-text notion-block-b17da51e161a43c1b525517b8359c0fd">
-                                                <b>Facilitate alignment with your team and the stakeholders.</b> As in,
-                                                everyone needs to understand your vision and why it matters. And oh
-                                                yeah,
-                                                your investors REALLY need to “get it” if your team is going to have the
-                                                mean$ to make it happen
-                                            </div>
-                                            <div class="notion-text notion-block-f5f5a84b387f4ccc9b56ecbc92ab606e"><span
-                                                    class="notion-inline-underscore"><b>And</b></span></div>
-                                            <div class="notion-text notion-block-785d95d8c0654fb1a079cab3b148b775">
-                                                <b>Ensure
-                                                    your target audience Gets It.</b> Like, IMMEDIATELY gets it. On a
-                                                cellular level. No wasted time, words, or images. Just the pure essence
-                                                of
-                                                your value, smack in their faces.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-93c01016de1e4b56b5120fb45cc5b54a"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.4375)">
-                                    <figure
-                                        class="notion-asset-wrapper notion-asset-wrapper-image notion-block-22a0307c4655467eb69705c3935180b0">
-                                        <div
-                                            style="position:relative;display:flex;justify-content:center;align-self:center;width:100%;max-width:100%;flex-direction:column;height:150px">
-                                            <img style="object-fit:cover"
-                                                src="https://usenotioncms.com/proxy/block/22a0307c-4655-467e-b697-05c3935180b0%2F9ba2933d-e6b4-43f2-bad9-0ec967844ca5%2FWebsite_Creator-bro.svg"
-                                                alt="notion image" loading="lazy" decoding="async" />
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <div class="notion-blank notion-block-681566ed33db46018c7c760698eb4b24"> </div>
-                            <div class="notion-text notion-block-d07043815795484788836328eaef3441">The point here is, an
-                                idea isn’t enough. By now you’ve probably heard some version of: “Story is everything.”
-                                If
-                                you’re ever tempted to ignore that advice because you’re not sure where to start, or if
-                                you
-                                think you can just wing it, we urge you to please reconsider. Not only is the human
-                                attraction to story based on undeniable biological facts (that’s just science) but the
-                                TYPE
-                                of story we’re drawn to is pretty hard wired as well. That’s also science. </div>
-                            <div class="notion-blank notion-block-5b32567bac3c4598a7938cceb714c9a8"> </div>
-                            <blockquote
-                                class="notion-quote notion-gray_background notion-block-2d7d80675d87441e9e48ed256e5c5ba6">
-                                <div>
-                                    In other words, all stories are <b>NOT</b> created equal, not by a long shot.
-                                </div>
-                            </blockquote>
-                            <div class="notion-row notion-block-2328612ac22745078cd05e43e09838dd">
-                                <div class="notion-column notion-block-5937fcd2b21440db87f94dec45cebd5e"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.375)">
-                                    <figure
-                                        class="notion-asset-wrapper notion-asset-wrapper-image notion-block-8ddc591b94ef4b2c8a89eb902e60338f">
-                                        <div
-                                            style="position:relative;display:flex;justify-content:center;align-self:center;width:100%;max-width:100%;flex-direction:column;height:150px">
-                                            <img style="object-fit:cover"
-                                                src="https://usenotioncms.com/proxy/block/8ddc591b-94ef-4b2c-8a89-eb902e60338f%2F12bd0798-e9fd-41df-9762-f745664c562a%2FNew_idea-bro.svg"
-                                                alt="notion image" loading="lazy" decoding="async" />
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-a4622b4c3741476fb34ce346e3272948"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.625)">
-                                    <h4 class="notion-h notion-h3 notion-block-4fa8f4a1cbc64e80a29b21c6fc449b90"
-                                        data-id="4fa8f4a1cbc64e80a29b21c6fc449b90"
-                                        id="you-need-to-tell-the-right-story-to-the-right-people-in-the-right-way-or-no-one-will-ever-get-it-.-the-right-story-is-how-you-get-people-on-board-with-your-vision.">
-                                        <span>
-                                            <div id="4fa8f4a1cbc64e80a29b21c6fc449b90" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link"
-                                                href="#you-need-to-tell-the-right-story-to-the-right-people-in-the-right-way-or-no-one-will-ever-get-it-.-the-right-story-is-how-you-get-people-on-board-with-your-vision."
-                                                title="You need to tell the right story to the right people in the right way or no one will ever “Get It”. The right story is how you get people on board with your vision."><svg
-                                                    viewBox="0 0 16 16" width="16" height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title">You need to tell the right story
-                                                to
-                                                the right people in the right way or no one will ever “Get It”. The
-                                                right
-                                                story is how you get people on board with your vision.</span>
-                                        </span>
-                                    </h4>
-                                    <div class="notion-blank notion-block-8acb431373964d1cba5e11ec765d9869"> </div>
-                                    <ul
-                                        class="notion-list notion-list-disc notion-block-87584665a8e342a09724fad231a7f0f2">
-                                        <li>If your <b>team</b> doesn’t “Get It”, the whole process is going to suck.
-                                            There
-                                            will be bickering. There will be tears. There will be frustration and lots
-                                            and
-                                            lots of wasted time. Trust us. We’ve seen it.</li>
-                                    </ul>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <ul class="notion-list notion-list-disc notion-block-217429f744374c638d530bac94a6f910">
-                                <li>If your <b>potential investors</b> don’t “Get It”, they’re not going to loosen those
-                                    purse strings.</li>
-                            </ul>
-                            <ul class="notion-list notion-list-disc notion-block-af7b5fbbb3874db8bdf9b05d312401f7">
-                                <li>If your <b>audience</b> doesn’t “Get It”, then they won’t notice you and they won’t
-                                    care. They’ll just keep scrolling. They’ll never have the Ah Ha moment that will
-                                    snowball into curiosity and desire, and you’ll never have a solid, growing customer
-                                    base.</li>
-                            </ul>
-                            <h3 class="notion-h notion-h2 notion-h-indent-0 notion-block-1304373da8324eca8d030dc70fae2920"
-                                data-id="1304373da8324eca8d030dc70fae2920"
-                                id="making-sure-that-everyone-gets-it-is-what-ux-movie-is-all-about."><span>
-                                    <div id="1304373da8324eca8d030dc70fae2920" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link"
-                                        href="#making-sure-that-everyone-gets-it-is-what-ux-movie-is-all-about."
-                                        title="Making sure that everyone “Gets It” is what UX Movie is all about."><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">Making sure that everyone “Gets It” is
-                                        what
-                                        UX Movie is all about.</span>
-                                </span></h3>
-                            <div class="notion-blank notion-block-a01876cf951c4aa9aaa6bafa712f4d9f"> </div>
-                            <div class="notion-callout notion-block-ebad2b8c56644832a5e84c6140b6ce15">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><img class="notion-page-icon"
-                                        src="https://www.notion.so/icons/brightness-high_gray.svg?mode=light"
-                                        alt="It’s about finding the stickiest, shortest, sweetest storified version of your idea so that you can tell the right story to the right people in the right way that will vibrate on an emotionally resonant frequency that will attract your audience like bees to the queen."
-                                        loading="lazy" decoding="async" /></div>
-                                <div class="notion-callout-text">It’s about finding the stickiest, shortest, sweetest
-                                    storified version of your idea so that you can tell the right story to the right
-                                    people
-                                    in the right way that will vibrate on an emotionally resonant frequency that will
-                                    attract your audience like bees to the queen.</div>
-                            </div>
-                            <div class="notion-row notion-block-0c00bedd3b1c44efa03936db425051c3">
-                                <div class="notion-column notion-block-a46c7bfcbf2d4ed1b14820c538984ed2"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.3125)">
-                                    <h3 class="notion-h notion-h2 notion-yellow notion-block-4e6698fe75f84e8fb861bdb190a5a18e"
-                                        data-id="4e6698fe75f84e8fb861bdb190a5a18e" id="and-guess-what"><span>
-                                            <div id="4e6698fe75f84e8fb861bdb190a5a18e" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#and-guess-what"
-                                                title="And guess what? "><svg viewBox="0 0 16 16" width="16"
-                                                    height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title">And guess what? </span>
-                                        </span></h3>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-6891e3cdc40948198731ff1f94cb0635"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.6875)">
-                                    <h4 class="notion-h notion-h3 notion-block-404d5a3ce5e944c485f3ed3f7d4a832e"
-                                        data-id="404d5a3ce5e944c485f3ed3f7d4a832e" id="getting-started-is-easy"><span>
-                                            <div id="404d5a3ce5e944c485f3ed3f7d4a832e" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#getting-started-is-easy"
-                                                title="Getting started is easy!"><svg viewBox="0 0 16 16" width="16"
-                                                    height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title">Getting started is easy!</span>
-                                        </span></h4>
-                                    <h4 class="notion-h notion-h3 notion-block-ffaadea8bf3a461d9ab8b57afa8a4bb3"
-                                        data-id="ffaadea8bf3a461d9ab8b57afa8a4bb3"
-                                        id="you-can-even-do-it-now.-for-real.">
-                                        <span>
-                                            <div id="ffaadea8bf3a461d9ab8b57afa8a4bb3" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#you-can-even-do-it-now.-for-real."
-                                                title="You can even do it now. For real."><svg viewBox="0 0 16 16"
-                                                    width="16" height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title">You can even do it now. For
-                                                real.</span>
-                                        </span>
-                                    </h4>
-                                    <h4 class="notion-h notion-h3 notion-block-4261dd2e295a46eca11a7d4419a5cec9"
-                                        data-id="4261dd2e295a46eca11a7d4419a5cec9" id="in-fact-we-insist."><span>
-                                            <div id="4261dd2e295a46eca11a7d4419a5cec9" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#in-fact-we-insist."
-                                                title="In fact, we insist."><svg viewBox="0 0 16 16" width="16"
-                                                    height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title">In fact, we insist.</span>
-                                        </span></h4>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <div
-                                class="notion-callout notion-yellow_background_co notion-block-6f55a6a57a3942a58aeee16a46aa9d71">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="✍️">✍️</span></div>
-                                <div class="notion-callout-text">All you have to do is write down the answers to 3
-                                    questions:<ul
-                                        class="notion-list notion-list-disc notion-block-c398f35b6c9f4618bb63b80903ff2db8">
-                                        <li>The Juicy Twist: What can you do for your customers that nobody else can do?
-                                        </li>
-                                    </ul>
-                                    <ul
-                                        class="notion-list notion-list-disc notion-block-71d2d62613b14bf9b6c1ca9ed5cfa45f">
-                                        <li>The X-Factor: What&#x27;s the secret sauce your customers will point to?
-                                            What
-                                            will you be known for?<em> </em></li>
-                                    </ul>
-                                    <ul
-                                        class="notion-list notion-list-disc notion-block-171363b03b8e46779be0a67941d62f34">
-                                        <li>The Evergreen Switch Trigger: Why are your customers ultimately compelled to
-                                            switch to your brand, follow your guidance &amp; juice your solution for all
-                                            it’s worth?</li>
-                                    </ul>
-                                    <div class="notion-blank notion-block-2947ec1fd1fb43e98a42d6b07780a61f"> </div>
-                                    <div class="notion-text notion-block-91bbe5518c8b4174ae67e1292496c102"><b>Don’t just
-                                            answer in your head</b> – you’ll forget the specifics later, and you’re
-                                        going to
-                                        need them. Seriously, write this down. If you don’t want to, then take a wee
-                                        break
-                                        and go watch Netflix, or pet your pet cat. Come back later – with a pen and
-                                        paper.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notion-blank notion-block-668f2deeab2b46feb5011a5630f47e23"> </div>
-                            <div class="notion-blank notion-block-2a759b1c75f94f28a4cbe73a7e840288"> </div>
-                            <h3 class="notion-h notion-h2 notion-h-indent-0 notion-block-ddd9260a2c864a6f884bf9778b910616"
-                                data-id="ddd9260a2c864a6f884bf9778b910616" id="ok.-ready"><span>
-                                    <div id="ddd9260a2c864a6f884bf9778b910616" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#ok.-ready" title="Ok. Ready? "><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">Ok. Ready? </span>
-                                </span></h3>
-                            <div class="notion-row notion-block-a9ac1d6f65d9426a97bdf539bca2e513">
-                                <div class="notion-column notion-block-8e9b5d647f4e45f5a625d49ca9f4cbda"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.3125)">
-                                    <figure
-                                        class="notion-asset-wrapper notion-asset-wrapper-image notion-block-aaecec54f79944ad8056b3e0d2a9c995">
-                                        <div
-                                            style="position:relative;display:flex;justify-content:center;align-self:center;width:100%;max-width:100%;flex-direction:column;height:150px">
-                                            <img style="object-fit:cover"
-                                                src="https://usenotioncms.com/proxy/block/aaecec54-f799-44ad-8056-b3e0d2a9c995%2Fe00a1412-438f-461d-9d6b-55531c737486%2FFortune_cookie-bro.svg"
-                                                alt="notion image" loading="lazy" decoding="async" />
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-0636d47e0228492cb5ed465ab46337f8"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.6875)">
-                                    <div class="notion-text notion-block-e1aa5ad99c734a93ad65fd220e133d43">As you write
-                                        the
-                                        answers, don’t overthink it. <b>Be broad if you need to be</b> – we’re going to
-                                        dig
-                                        deeper and hone this later. Do you disrupt life insurance on the blockchain?
-                                        Cool –
-                                        write that down. Do you disrupt the fast food industry? Awesome! Write it down.
-                                        Highest level is absolutely fine. Just get something down for now.</div>
-                                    <div class="notion-text notion-block-3b0521a55cd04d2f9555c914ab7692d9">Seriously,
-                                        getting started really is that simple. Now keep those answers in your back
-                                        pocket
-                                        because we’re going to return to them shortly.</div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <blockquote class="notion-quote notion-block-864b7f8abba345378dcff848a520c80e">
-                                <div>To be clear: <span class="notion-gray_background">Digging into the answers to these
-                                        questions is the single most important thing you can do</span> to position your
-                                    story in a way that will attract and resonate with your audience and compel them to
-                                    want
-                                    MOAR. It’s the solid foundation – the roots – from which you can grow.</div>
-                            </blockquote>
-                            <div class="notion-blank notion-block-7a57988e836d4f8a944d50b3e876b420"> </div>
-                            <div class="notion-text notion-block-9ff34671a4fa4310bdee2940cb459f67">Because at the end of
-                                the
-                                day, <b>if you don’t attract an audience … then you won’t get the chance to do anything
-                                    else</b> and your wonderful idea will die a lonely death. <b>💀</b></div>
-                            <div class="notion-text notion-block-1cdfb931dda74d0eb761c8319d300591">Got it?</div>
-                            <div class="notion-text notion-block-7d71e05f367544afbd284a61e81159bb">Let’s dig in a bit
-                                deeper.</div>
-                            <div class="notion-blank notion-block-23daadade0fa428ebcd1a6f9e27da5eb"> </div>
-                            <div class="notion-blank notion-block-20c1be104d2046b4b436f20bae6664a8"> </div>
-                            <h2 class="notion-h notion-h1 notion-h-indent-0 notion-block-a7d1883d6fb04777a150fdd94e895669"
-                                data-id="a7d1883d6fb04777a150fdd94e895669" id="loglines-101"><span>
-                                    <div id="a7d1883d6fb04777a150fdd94e895669" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#loglines-101" title="Loglines 101"><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">Loglines 101</span>
-                                </span></h2>
-                            <hr class="notion-hr notion-block-f8ce64716a6a4c8aaf271c01c17fb8c4" />
-                            <div class="notion-text notion-block-e6ef430cf99b4ec19c414990c3940576">So. How does this all
-                                work? Is it really just about 3 questions?</div>
-                            <div class="notion-text notion-block-a46d4fb1ad704e53b4f008cd9c7c8590">Yes and no.</div>
-                            <h4 class="notion-h notion-h3 notion-h-indent-1 notion-block-a036737244a24b329aec8555b7658b79"
-                                data-id="a036737244a24b329aec8555b7658b79"
-                                id="practically-speaking-ux-movie-walks-you-through-how-to"><span>
-                                    <div id="a036737244a24b329aec8555b7658b79" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link"
-                                        href="#practically-speaking-ux-movie-walks-you-through-how-to"
-                                        title="Practically speaking, UX Movie walks you through how to"><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">Practically speaking, UX Movie walks you
-                                        through how to</span>
-                                </span></h4>
-                            <ul class="notion-list notion-list-disc notion-block-936b12daef0740c0a55752d92b61c696">
-                                <li>Hypothesize</li>
-                            </ul>
-                            <ul class="notion-list notion-list-disc notion-block-d147ba6cbbb34ee886ed886a50bbaa14">
-                                <li>Hone</li>
-                            </ul>
-                            <ul class="notion-list notion-list-disc notion-block-99866fff0a31470f8903d796314a507f">
-                                <li>Test and</li>
-                            </ul>
-                            <ul class="notion-list notion-list-disc notion-block-3d3878f4c3a44c38ad06074d666ccf84">
-                                <li>Choose THE shortest, most memorable, easy-to-grasp, and captivating above-the-fold
-                                    headline so that everyone – and we mean everyone – will totally completely and
-                                    absolutely
+  --notion-red: rgb(224, 62, 62);
+  --notion-pink: rgb(173, 26, 114);
+  --notion-blue: rgb(11, 110, 153);
+  --notion-purple: rgb(105, 64, 165);
+  --notion-teal: rgb(77, 100, 97);
+  --notion-yellow: rgb(223, 171, 1);
+  --notion-orange: rgb(217, 115, 13);
+  --notion-brown: rgb(100, 71, 58);
+  --notion-gray: rgb(155, 154, 151);
 
-                                    “Get It”.
-                                    Want it.
-                                    Need to learn all about it.
-                                    Feel like they can’t live without it.
-                                    <em>Pay for it.</em>
-                                </li>
-                            </ul>
-                            <h2 class="notion-h notion-h1 notion-h-indent-0 notion-block-ec86a612b1b1428cae6de6c115db9727"
-                                data-id="ec86a612b1b1428cae6de6c115db9727" id="and-it-begins-with-your-logline."><span>
-                                    <div id="ec86a612b1b1428cae6de6c115db9727" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#and-it-begins-with-your-logline."
-                                        title="And it begins with your logline."><svg viewBox="0 0 16 16" width="16"
-                                            height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">And it begins with your logline.</span>
-                                </span></h2>
-                            <div class="notion-text notion-block-cf59b1c640f74f91bdd98a0241978131">What’s that you ask?
-                            </div>
-                            <div class="notion-text notion-block-6431044e4d3f42d38711803fe001ab73">Unbeknownst to you,
-                                you’ve already begun working on this by answering those 3 questions earlier. (Told you
-                                we’d
-                                come back to it.)</div>
-                            <div
-                                class="notion-callout notion-yellow_background_co notion-block-68fa14aeac414c7b808802475f404bc5">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="🎬">🎬</span></div>
-                                <div class="notion-callout-text">Logline is actually a movie term. We <em>love</em>
-                                    movie
-                                    terms, not only because we love movies (and great series) but because we’re betting
-                                    you
-                                    love them too. And so does your team, and so do your stakeholders. Even if you don’t
-                                    know anything about UX jargon or narrative science, chances are you know a thing or
-                                    two
-                                    about movies. Movie language is an accessible and fun way to explain storytelling
-                                    concepts. It creates a basis for the kind of shared understanding around your vision
-                                    that’s so crucial in order for your idea to become a crave-able reality.</div>
-                            </div>
-                            <div class="notion-text notion-block-fa087b5b195442448ebf49c2f622edbf">And accessible
-                                terminology helps everybody get to the place where they “Get It”.</div>
-                            <div class="notion-row notion-block-6426ba68b7b945ba993a6740615e4290">
-                                <div class="notion-column notion-block-b5ac386122d74a83942c38a8d2affa07"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <h4 class="notion-h notion-h3 notion-block-f7f8776d8baa45eeb7426ef9a24d897a"
-                                        data-id="f7f8776d8baa45eeb7426ef9a24d897a"
-                                        id="so-back-to-loglines.-in-movie-terms-they-state-the-central-conflict-of-the-story-and-tease-the-climax-moment-.-they-often-provide-both-a-top-level-synopsis-of-the-story-s-plot-and-an-emotional-hook-to-stimulate-interest-but-without-any-spoilers-.">
-                                        <span>
-                                            <div id="f7f8776d8baa45eeb7426ef9a24d897a" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link"
-                                                href="#so-back-to-loglines.-in-movie-terms-they-state-the-central-conflict-of-the-story-and-tease-the-climax-moment-.-they-often-provide-both-a-top-level-synopsis-of-the-story-s-plot-and-an-emotional-hook-to-stimulate-interest-but-without-any-spoilers-."
-                                                title="So, back to loglines. In movie terms, they state the central conflict of the story (and tease the climax moment). They often provide both a top-level synopsis of the story&#x27;s plot, and an emotional hook to stimulate interest (but without any spoilers)."><svg
-                                                    viewBox="0 0 16 16" width="16" height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title">So, back to loglines. In movie
-                                                terms,
-                                                they state the central conflict of the story (and tease the climax
-                                                moment).
-                                                They often provide both a top-level synopsis of the story&#x27;s plot,
-                                                and
-                                                an emotional hook to stimulate interest (but without any
-                                                spoilers).</span>
-                                        </span>
-                                    </h4>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-9fb727646a174b95b25dd6ca9cbf32cd"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <figure
-                                        class="notion-asset-wrapper notion-asset-wrapper-image notion-block-c832daaba4ba4ef7bd4f56bb131e06b9">
-                                        <div
-                                            style="position:relative;display:flex;justify-content:center;align-self:center;width:240px;max-width:100%;flex-direction:column">
-                                            <img style="object-fit:cover"
-                                                src="https://usenotioncms.com/proxy/block/c832daab-a4ba-4ef7-bd4f-56bb131e06b9%2Fa587b8fb-8c5e-4310-a355-27bc84ea9346%2FAnxiety-bro.svg"
-                                                alt="notion image" loading="lazy" decoding="async" />
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <div
-                                class="notion-callout notion-gray_background_co notion-block-9236aca6bb2c46a9bec84ea8bcb15b22">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="🎥">🎥</span></div>
-                                <div class="notion-callout-text">Like this: “A computer hacker learns from mysterious
-                                    rebels
-                                    about the true nature of his reality and his role in the war against its
-                                    controllers.”
-                                    (The Matrix)</div>
-                            </div>
-                            <div
-                                class="notion-callout notion-gray_background_co notion-block-80fdf9e1bb214ced8df50a8f276e7377">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="🎥">🎥</span></div>
-                                <div class="notion-callout-text">Or this: “Seven space truckers accidentally pick up an
-                                    intelligent, hostile alien life form, intent on picking them off, one by one in the
-                                    confines of their giant star freighter.” (Alien)</div>
-                            </div>
-                            <div class="notion-blank notion-block-4a8ae82629a945bb8002306a58922cd8"> </div>
-                            <div class="notion-text notion-block-dbc3218b2ff3484ebc19b6c9100d00aa">The logline is kind
-                                of
-                                like the <b>initial wireframe of the</b> <b>movie poster</b> in that it offers a
-                                tantalizing
-                                taste of the main event. Then, you take the core of the logline and form it into a
-                                trailer
-                                for the movie. The trailer needs to build on that and set the right expectations and
-                                create
-                                wild anticipation. It’s a jump-cut, time-traveling process, because we jump from the
-                                trailer
-                                into the movie (adjust some stuff) and come back to the trailer to see if it still
-                                works.
-                                Finally, the experience of watching the movie must align with those expectations – or
-                                even
-                                the fanciest poster and most thrilling trailer are merely wastes of time.
-                                <div class="notion-text-children">
-                                    <blockquote class="notion-quote notion-block-d63806b49c6e457e97b79b56a0dc525f">
-                                        <div><span class="notion-gray_background">Your logline is the starting point for
-                                                your brand</span>, just like a movie poster. It’s the foundation for all
-                                            your expectation-setting messaging (the trailer) as well as the actual
-                                            product
-                                            experience (the movie itself) where you deliver on those expectations.</div>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="notion-blank notion-block-89fce8b7ccb04ab2b184d4be9126a6de"> </div>
-                            <div class="notion-blank notion-block-6294d4bde25145bba685e5cd55f34bd6"> </div>
-                            <h2 class="notion-h notion-h1 notion-h-indent-0 notion-block-f81d9f4ee35241b18ec9fe65ea7da799"
-                                data-id="f81d9f4ee35241b18ec9fe65ea7da799" id="digging-deeper"><span>
-                                    <div id="f81d9f4ee35241b18ec9fe65ea7da799" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#digging-deeper" title="Digging Deeper"><svg
-                                            viewBox="0 0 16 16" width="16" height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">Digging Deeper</span>
-                                </span></h2>
-                            <div class="notion-text notion-block-26a82037c4ef41cf9ec6dbd8b59e1e6d">The logline
-                                components
-                                break down into the What, the Why and the Why Now. You answered these questions earlier,
-                                now
-                                let’s dig a little deeper into the concepts.</div>
-                            <div class="notion-blank notion-block-02df254e0d4d40438015b0c50a399e02"> </div>
-                            <div class="notion-row notion-block-152bf8ec38c147399c92607b3c9e64d5">
-                                <div class="notion-column notion-block-084b350a7a484d2fa5b17ad0f9052b1f"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <h4 class="notion-h notion-h3 notion-block-6534ea68016b48ed91d3b906dbcffc26"
-                                        data-id="6534ea68016b48ed91d3b906dbcffc26" id="what"><span>
-                                            <div id="6534ea68016b48ed91d3b906dbcffc26" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#what" title="What:"><svg
-                                                    viewBox="0 0 16 16" width="16" height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title"><b>What:</b></span>
-                                        </span></h4>
-                                    <div class="notion-text notion-block-1dc13f0f02ec4be8ad192717bc563a4f"><span
-                                            class="notion-gray"><em>What can you do for your customers that nobody else
-                                                can
-                                                do?</em></span></div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-61c01f63bedc4e419de440f4f1230f75"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <div class="notion-text notion-block-acf0fdd3699648aa8453965b272612b8">Just like a
-                                        movie
-                                        or series logline needs to quickly and succinctly convey why it’s different from
-                                        every other vampire movie (these vamps sparkle!) or detective series (Satan
-                                        solves
-                                        crimes!) or whatever its genre, so too, <b>your solution MUST disrupt a status
-                                            quo
-                                            belief your audience holds</b>. In so doing, you demonstrate that you offer
-                                        something no one else does. Otherwise it’s not a breakthrough and no one will
-                                        pay
-                                        attention.</div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <div class="notion-row notion-block-3c43dc179dda4d548189b6c0cd0c9bc7">
-                                <div class="notion-column notion-block-f33b5e5f937d4e7c8687161d978bc5b8"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <div class="notion-blank notion-block-602a8dcfe3df46238da341ec412fe983"> </div>
-                                    <h4 class="notion-h notion-h3 notion-block-61c52068dc9b478a8f22183f2340a2c7"
-                                        data-id="61c52068dc9b478a8f22183f2340a2c7" id="why"><span>
-                                            <div id="61c52068dc9b478a8f22183f2340a2c7" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#why" title="Why:"><svg
-                                                    viewBox="0 0 16 16" width="16" height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title"><b>Why:</b></span>
-                                        </span></h4>
-                                    <div class="notion-text notion-block-757939fe2f7340ecb0c3f4a71a548f9a"><span
-                                            class="notion-gray"><em>What&#x27;s the secret sauce (the X-Factor) your
-                                                customers will point to? What will you be known for? (Why is this
-                                                special?)
-                                            </em></span></div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-e99d80019f0a43b596cb0f28fc7a4da9"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5000000000000001)">
-                                    <div class="notion-blank notion-block-d9946b7f1dbd4af5a185e2225c0679ea"> </div>
-                                    <div class="notion-text notion-block-b19a59d7ecd44eda80c788bb3d370644">You don’t
-                                        have to
-                                        be a bleeding edge piece of AI to answer this. You could be an old fashioned
-                                        product
-                                        you can hold in your hands, but if someone can’t immediately grasp the nature of
-                                        your breakthrough then it won’t attract attention. <b>Your X-Factor is the
-                                            distilled
-                                            version of your secret sauce.</b> It’s a “yell-able why” that someone could
-                                        yell
-                                        across a busy street to a friend, and the friend would totally get it. </div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <div class="notion-row notion-block-6c7e7652455542858b5c5e99d2e74ac2">
-                                <div class="notion-column notion-block-46af6bedd511476bae241a3fd0a8e11a"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <div class="notion-blank notion-block-11930213e03a4caeb462f956281d9b22"> </div>
-                                    <h4 class="notion-h notion-h3 notion-block-c705045a32ab488cad4a4af879be4026"
-                                        data-id="c705045a32ab488cad4a4af879be4026" id="why-now"><span>
-                                            <div id="c705045a32ab488cad4a4af879be4026" class="notion-header-anchor">
-                                            </div><a class="notion-hash-link" href="#why-now" title="Why Now:"><svg
-                                                    viewBox="0 0 16 16" width="16" height="16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                                    </path>
-                                                </svg></a><span class="notion-h-title"><b>Why Now:</b></span>
-                                        </span></h4>
-                                    <div class="notion-text notion-block-d7d3fd212d6c4c5aba7b984e82672a4e"><span
-                                            class="notion-gray"><em>Why are your customers ultimately compelled to
-                                                switch to
-                                                your brand, follow your guidance &amp; juice your solution for all it’s
-                                                worth?</em></span></div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                                <div class="notion-column notion-block-59d1b4b83137449b9b2385fb4f79871f"
-                                    style="width:calc((100% - (1 * min(32px, 4vw))) * 0.5)">
-                                    <div class="notion-blank notion-block-b18740f0abbe4d84a5e8cff76ca79658"> </div>
-                                    <div class="notion-text notion-block-b3995adf609c4f04a32e576692738ff4">If it isn’t
-                                        urgent or important, why will your audience be excited and motivated to learn
-                                        more?
-                                        (Pro tip: they won’t.) People are creatures of habit, and the brain likes to
-                                        take
-                                        the path of least resistance from a to z. That’s a neurological fact. Our brains
-                                        only consider changing direction when our emotions get involved and start making
-                                        dopamine. And what’s a surefire way to grab those emotions? A: By offering a
-                                        solution to an urgent, important, and downright painful challenge. By showing
-                                        that
-                                        you hold THE key to a delicious and wonderful sticky future that your audience
-                                        couldn’t have imagined before your solution came along. So, <b>give them ONE
-                                            good
-                                            reason to switch</b>. Not later: NOW. </div>
-                                </div>
-                                <div class="notion-spacer"></div>
-                            </div>
-                            <div class="notion-blank notion-block-0d92ad1293f241f0b0d3438a9b8aba49"> </div>
-                            <div class="notion-text notion-block-72a0764297a346429a9fae9e287e164a">Put all these things
-                                together and you get: …</div>
-                            <div class="notion-blank notion-block-67214e560256410d96088ec09311330c"> </div>
-                            <div class="notion-blank notion-block-8c3d5938f60043e99ad517c1449f9a52"> </div>
-                            <h2 class="notion-h notion-h1 notion-h-indent-0 notion-block-81f33cb335f047dc981797d6f75ba0f3"
-                                data-id="81f33cb335f047dc981797d6f75ba0f3" id="what-why-why-now-ah-ha-moment"><span>
-                                    <div id="81f33cb335f047dc981797d6f75ba0f3" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#what-why-why-now-ah-ha-moment"
-                                        title="What + Why + Why Now = Ah-Ha Moment"><svg viewBox="0 0 16 16" width="16"
-                                            height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title"><b>What + Why + Why Now = Ah-Ha
-                                            Moment</b></span>
-                                </span></h2>
-                            <hr class="notion-hr notion-block-57c6389661a94c2ab668a95a8b7e4219" />
-                            <h4 class="notion-h notion-h3 notion-h-indent-1 notion-block-082ae2380704478fac32ecc51ba9fc32"
-                                data-id="082ae2380704478fac32ecc51ba9fc32" id="what-s-the-ah-ha-moment-you-ask"><span>
-                                    <div id="082ae2380704478fac32ecc51ba9fc32" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#what-s-the-ah-ha-moment-you-ask"
-                                        title="What’s the Ah-Ha Moment, you ask? "><svg viewBox="0 0 16 16" width="16"
-                                            height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">What’s the Ah-Ha Moment, you ask? </span>
-                                </span></h4>
-                            <blockquote class="notion-quote notion-block-daba8610568d4dd7b97e58c0ee5c8882">
-                                <div>It’s the moment where your audience’s mind is blown at the possibilities they never
-                                    imagined. It’s the moment they seriously question the status quo belief they’ve been
-                                    holding on to. It’s the moment where they REALLY GET IT. It’s the moment where they
-                                    will
-                                    begin to desire you. It’s the moment you become memorable.</div>
-                            </blockquote>
-                            <figure
-                                class="notion-asset-wrapper notion-asset-wrapper-image notion-block-b40090c24ffd48fcb0546774bd01c0a0">
-                                <div
-                                    style="position:relative;display:flex;justify-content:center;align-self:center;width:336px;max-width:100%;flex-direction:column">
-                                    <img style="object-fit:cover"
-                                        src="https://usenotioncms.com/proxy/block/b40090c2-4ffd-48fc-b054-6774bd01c0a0%2F09fd1534-1cbe-4e84-8854-6eb94cac3071%2FMental_health-bro.svg"
-                                        alt="notion image" loading="lazy" decoding="async" />
-                                </div>
-                            </figure>
-                            <div class="notion-text notion-block-06aed3a6b08d473c9e18bfcdc7da490a">Now that you
-                                understand
-                                the What, the Why, and the Why Now a bit more, refer to your answers from earlier, tweak
-                                them, and fill in this logline template:</div>
-                            <div class="notion-blank notion-block-9db9fbd36d3d4aafa534c964af2eaeae"> </div>
-                            <div
-                                class="notion-callout notion-yellow_background_co notion-block-4fde0af5b5d94879b5f5da69b4233bd4">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="✍️">✍️</span></div>
-                                <div class="notion-callout-text">My solution can do ____________________ that no one
-                                    else
-                                    can.
+  --notion-red_background: rgb(251, 228, 228);
+  --notion-pink_background: rgb(244, 223, 235);
+  --notion-blue_background: rgb(221, 235, 241);
+  --notion-purple_background: rgb(234, 228, 242);
+  --notion-teal_background: rgb(221, 237, 234);
+  --notion-yellow_background: rgb(251, 243, 219);
+  --notion-orange_background: rgb(250, 235, 221);
+  --notion-brown_background: rgb(233, 229, 227);
+  --notion-gray_background: rgb(235, 236, 237);
 
-                                    My secret sauce is: ____________________<div
-                                        class="notion-text notion-block-dae0621611834973ad7cf8fc1a40cede">
-                                        People would want to switch now because: ____________
+  --notion-red_background_co: rgba(251, 228, 228, 0.3);
+  --notion-pink_background_co: rgba(244, 223, 235, 0.3);
+  --notion-blue_background_co: rgba(221, 235, 241, 0.3);
+  --notion-purple_background_co: rgba(234, 228, 242, 0.3);
+  --notion-teal_background_co: rgba(221, 237, 234, 0.3);
+  --notion-yellow_background_co: rgba(251, 243, 219, 0.3);
+  --notion-orange_background_co: rgba(250, 235, 221, 0.3);
+  --notion-brown_background_co: rgba(233, 229, 227, 0.3);
+  --notion-gray_background_co: rgba(235, 236, 237, 0.3);
 
-                                        <b>Don’t just stop at one template!</b>
-                                        We’re looking for the stickiest version, and to find that you’ve got to test out
-                                        more than one. Come up with a bunch!
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notion-text notion-block-89127c9c9ef84c14a395cf7e2f385dd5">
-                                How? Well, explore different facets of the status quo you disrupt. Look at your
-                                breakthrough
-                                from multiple angles. Think of different reasons this might be urgent and important to
-                                your
-                                audience.</div>
-                            <h3 class="notion-h notion-h2 notion-h-indent-1 notion-block-c693145d296c4077a94638e9ba8bda76"
-                                data-id="c693145d296c4077a94638e9ba8bda76" id="now-it-s-time-to-rank-and-test."><span>
-                                    <div id="c693145d296c4077a94638e9ba8bda76" class="notion-header-anchor"></div><a
-                                        class="notion-hash-link" href="#now-it-s-time-to-rank-and-test."
-                                        title="Now it’s time to rank and test. "><svg viewBox="0 0 16 16" width="16"
-                                            height="16">
-                                            <path fill-rule="evenodd"
-                                                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                                            </path>
-                                        </svg></a><span class="notion-h-title">Now it’s time to rank and test. </span>
-                                </span></h3>
-                            <ul class="notion-list notion-list-disc notion-block-826a4edce24c471dad8bc19e77f26c5c">
-                                <li>You’ll want to use a system such as force rank or max diff. (But know that max diff
-                                    doesn’t work with fewer than 7 items, so choose your method accordingly.)</li>
-                            </ul>
-                            <ul class="notion-list notion-list-disc notion-block-2eed84813c86430eb8aa908d8cc56f8b">
-                                <li>Hypothesize about what people’s reactions will be. What do you want them to take
-                                    away
-                                    form your message? What do you want to hear them say? </li>
-                            </ul>
-                            <ul class="notion-list notion-list-disc notion-block-aacbe468a9e24f4ab3931c9f28fd2277">
-                                <li>Then, actually road test the top candidates with real people that you recruit from
-                                    your
-                                    target audience to see how they’ll react. You can’t write the script for their Ah Ha
-                                    moment but you sure as hell want to see a few things happen:</li>
-                                <ul class="notion-list notion-list-disc notion-block-aacbe468a9e24f4ab3931c9f28fd2277">
-                                    <li>Their status quo belief is suddenly challenged. They might say things like “You
-                                        mean
-                                        I don’t have to …?” “So it isn’t always true that …?” etc.</li>
-                                    <li>Their eyes (so to speak) light up. They have that lightbulb moment</li>
-                                    <li>They start talking about what this means to them in a way that aligns with your
-                                        breakthrough and sticky future (“Wow, now I’ll be able to …” “This means I don’t
-                                        have to struggle with ____ anymore” etc.)</li>
-                                </ul>
-                            </ul>
-                            <div class="notion-blank notion-block-2a877411d20f47308a2200c8b7057518"> </div>
-                            <div class="notion-callout notion-block-ecf5471768ba4877aa63daf4c7d2d722">
-                                <div class="notion-page-icon-inline notion-page-icon-span"><span
-                                        class="notion-page-icon" role="img" aria-label="✨">✨</span></div>
-                                <div class="notion-callout-text">Based on what you learn from their reactions, refine
-                                    and
-                                    hone your top performing logline. Rinse repeat. Keep going until everyone Gets It.
-                                    Boom,
-                                    you’ve got the sticky version.</div>
-                            </div>
-                        </article>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </div>
+  --notion-item-blue: rgba(0, 120, 223, 0.2);
+  --notion-item-orange: rgba(245, 93, 0, 0.2);
+  --notion-item-green: rgba(0, 135, 107, 0.2);
+  --notion-item-pink: rgba(221, 0, 129, 0.2);
+  --notion-item-brown: rgba(140, 46, 0, 0.2);
+  --notion-item-red: rgba(255, 0, 26, 0.2);
+  --notion-item-yellow: rgba(233, 168, 0, 0.2);
+  --notion-item-default: rgba(206, 205, 202, 0.5);
+  --notion-item-purple: rgba(103, 36, 222, 0.2);
+  --notion-item-gray: rgba(155, 154, 151, 0.4);
 
-</body>
+  --notion-max-width: 720px;
+  --notion-header-height: 45px;
+}
 
-</html>
+.dark-mode {
+  --fg-color: rgba(255, 255, 255, 0.9);
+  --fg-color-0: var(--fg-color);
+  --fg-color-1: var(--fg-color);
+  --fg-color-2: var(--fg-color);
+  --fg-color-3: var(--fg-color);
+  --fg-color-4: var(--fg-color);
+  --fg-color-5: rgba(255, 255, 255, 0.7);
+  --fg-color-6: #fff;
+  --fg-color-icon: #fff;
+
+  --bg-color: #2f3437;
+  --bg-color-0: rgb(71, 76, 80);
+  --bg-color-1: rgb(63, 68, 71);
+  --bg-color-2: rgba(135, 131, 120, 0.15);
+
+  --notion-red: rgb(255, 115, 105);
+  --notion-pink: rgb(226, 85, 161);
+  --notion-blue: rgb(82, 156, 202);
+  --notion-purple: rgb(154, 109, 215);
+  --notion-teal: rgb(77, 171, 154);
+  --notion-yellow: rgb(255, 220, 73);
+  --notion-orange: rgb(255, 163, 68);
+  --notion-brown: rgb(147, 114, 100);
+  --notion-gray: rgba(151, 154, 155, 0.95);
+  --notion-red_background: rgb(89, 65, 65);
+  --notion-pink_background: rgb(83, 59, 76);
+  --notion-blue_background: rgb(54, 73, 84);
+  --notion-purple_background: rgb(68, 63, 87);
+  --notion-teal_background: rgb(53, 76, 75);
+  --notion-yellow_background: rgb(89, 86, 59);
+  --notion-orange_background: rgb(89, 74, 58);
+  --notion-brown_background: rgb(67, 64, 64);
+  --notion-gray_background: rgb(69, 75, 78);
+  --notion-red_background_co: rgba(89, 65, 65, 0.3);
+  --notion-pink_background_co: rgba(83, 59, 76, 0.3);
+  --notion-blue_background_co: rgba(120, 162, 187, 0.3);
+  --notion-purple_background_co: rgba(68, 63, 87, 0.3);
+  --notion-teal_background_co: rgba(53, 76, 75, 0.3);
+  --notion-yellow_background_co: rgba(89, 86, 59, 0.3);
+  --notion-orange_background_co: rgba(89, 74, 58, 0.3);
+  --notion-brown_background_co: rgba(67, 64, 64, 0.3);
+  --notion-gray_background_co: rgba(69, 75, 78, 0.3);
+}
+
+.notion * {
+  box-sizing: border-box;
+}
+
+.notion {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--fg-color);
+  caret-color: var(--fg-color);
+  font-family: var(--notion-font);
+}
+
+.notion > * {
+  padding: 3px 0;
+}
+
+.notion * {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.notion *::-moz-selection {
+  background: var(--select-color-1);
+}
+
+.notion *::selection {
+  background: var(--select-color-1);
+}
+
+.notion *,
+.notion *:focus {
+  outline: 0;
+}
+
+.notion-page-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1300px) and (min-height: 300px) {
+  .notion-page-content-has-aside {
+    display: flex;
+    flex-direction: row;
+    width: calc((100vw + var(--notion-max-width)) / 2);
+  }
+
+  .notion-page-content-has-aside .notion-aside {
+    display: flex;
+  }
+
+  .notion-page-content-has-aside .notion-page-content-inner {
+    width: var(--notion-max-width);
+    max-width: var(--notion-max-width);
+  }
+}
+
+.notion-page-content-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.notion-aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 148px;
+  z-index: 101;
+  /* top: calc((100vh - 48px - 100%) / 2); */
+
+  align-self: flex-start;
+  flex: 1;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notion-aside-table-of-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: calc(100vh - 148px - 16px);
+  min-width: 222px;
+  overflow: auto;
+  background: var(--bg-color);
+  border-radius: 4px;
+}
+
+.notion-aside-table-of-contents-header {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.1em;
+  word-break: break-word;
+}
+
+.notion-aside-table-of-contents .notion-table-of-contents-item {
+  line-height: 1;
+}
+
+.notion-aside-table-of-contents
+  .notion-table-of-contents-item-indent-level-0:first-of-type {
+  margin-top: 0;
+}
+
+.notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-0 {
+  margin-top: 0.25em;
+}
+
+.notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-1 {
+  font-size: 13px;
+}
+
+.notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-2 {
+  font-size: 12px;
+}
+
+.notion-aside-table-of-contents .notion-table-of-contents-item-body {
+  border: 0 none;
+}
+
+.notion-table-of-contents-active-item {
+  color: var(--select-color-0) !important;
+}
+
+.notion-app {
+  position: relative;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.notion-viewport {
+  position: relative;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.medium-zoom-overlay {
+  z-index: 300;
+}
+
+.medium-zoom-image {
+  border-radius: 0;
+}
+
+.medium-zoom-image--opened {
+  margin: unset !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  z-index: 301;
+}
+
+.notion-frame {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.notion-page-scroller {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  min-height: calc(100vh - var(--notion-header-height));
+}
+
+.notion-red,
+.notion-red_co {
+  color: var(--notion-red);
+}
+
+.notion-pink,
+.notion-pink_co {
+  color: var(--notion-pink);
+}
+
+.notion-blue,
+.notion-blue_co {
+  color: var(--notion-blue);
+}
+
+.notion-purple,
+.notion-purple_co {
+  color: var(--notion-purple);
+}
+
+.notion-teal,
+.notion-teal_co {
+  color: var(--notion-teal);
+}
+
+.notion-yellow,
+.notion-yellow_co {
+  color: var(--notion-yellow);
+}
+
+.notion-orange,
+.notion-orange_co {
+  color: var(--notion-orange);
+}
+
+.notion-brown,
+.notion-brown_co {
+  color: var(--notion-brown);
+}
+
+.notion-gray,
+.notion-gray_co {
+  color: var(--notion-gray);
+}
+
+.notion-red_background {
+  background-color: var(--notion-red_background);
+}
+
+.notion-pink_background {
+  background-color: var(--notion-pink_background);
+}
+
+.notion-blue_background {
+  background-color: var(--notion-blue_background);
+}
+
+.notion-purple_background {
+  background-color: var(--notion-purple_background);
+}
+
+.notion-teal_background {
+  background-color: var(--notion-teal_background);
+}
+
+.notion-yellow_background {
+  background-color: var(--notion-yellow_background);
+}
+
+.notion-orange_background {
+  background-color: var(--notion-orange_background);
+}
+
+.notion-brown_background {
+  background-color: var(--notion-brown_background);
+}
+
+.notion-gray_background {
+  background-color: var(--notion-gray_background);
+}
+
+.notion-red_background_co {
+  background-color: var(--notion-red_background_co);
+}
+
+.notion-pink_background_co {
+  background-color: var(--notion-pink_background_co);
+}
+
+.notion-blue_background_co {
+  background-color: var(--notion-blue_background_co);
+}
+
+.notion-purple_background_co {
+  background-color: var(--notion-purple_background_co);
+}
+
+.notion-teal_background_co {
+  background-color: var(--notion-teal_background_co);
+}
+
+.notion-yellow_background_co {
+  background-color: var(--notion-yellow_background_co);
+}
+
+.notion-orange_background_co {
+  background-color: var(--notion-orange_background_co);
+}
+
+.notion-brown_background_co {
+  background-color: var(--notion-brown_background_co);
+}
+
+.notion-gray_background_co {
+  background-color: var(--notion-gray_background_co);
+}
+
+.notion-item-blue {
+  background-color: var(--notion-item-blue);
+}
+
+.notion-item-orange {
+  background-color: var(--notion-item-orange);
+}
+
+.notion-item-green {
+  background-color: var(--notion-item-green);
+}
+
+.notion-item-pink {
+  background-color: var(--notion-item-pink);
+}
+
+.notion-item-brown {
+  background-color: var(--notion-item-brown);
+}
+
+.notion-item-red {
+  background-color: var(--notion-item-red);
+}
+
+.notion-item-yellow {
+  background-color: var(--notion-item-yellow);
+}
+
+.notion-item-default {
+  background-color: var(--notion-item-default);
+}
+
+.notion-item-purple {
+  background-color: var(--notion-item-purple);
+}
+
+.notion-item-gray {
+  background-color: var(--notion-item-gray);
+}
+
+.notion b {
+  font-weight: 600;
+}
+
+.notion-title {
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.notion-h {
+  position: relative;
+  display: inline-block;
+
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 3px 2px;
+  margin-bottom: 1px;
+
+  max-width: 100%;
+  white-space: non-wrap;
+  word-break: break-word;
+}
+
+.notion-h1 {
+  font-size: 1.875em;
+  margin-top: 1.08em;
+}
+
+.notion-header-anchor {
+  position: absolute;
+  top: -54px;
+  left: 0;
+}
+
+.notion-title + .notion-h1,
+.notion-title + .notion-h2,
+.notion-title + .notion-h3 {
+  margin-top: 0;
+}
+
+/* TODO: notion-page-content */
+
+.notion-h1:first-child {
+  margin-top: 0;
+}
+
+/* .notion-h1:first-of-type {
+  margin-top: 2px;
+} */
+
+.notion-h2 {
+  font-size: 1.5em;
+  margin-top: 1.1em;
+}
+
+.notion-h3 {
+  font-size: 1.25em;
+  margin-top: 1em;
+}
+
+.notion-h:hover .notion-hash-link {
+  opacity: 1;
+}
+
+.notion-hash-link {
+  opacity: 0;
+  text-decoration: none;
+  float: left;
+  margin-left: -20px;
+  padding-right: 4px;
+  fill: var(--fg-color-icon);
+}
+
+.notion-page-cover {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 30vh !important;
+  min-height: 30vh !important;
+  max-height: 30vh !important;
+  padding: 0;
+}
+
+.notion-page-cover-wrapper {
+  width: 100%;
+  height: 30vh;
+  min-height: 30vh;
+  max-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notion-collection-card-cover {
+  overflow: hidden;
+}
+
+.notion-collection-card-cover span,
+.notion-collection-card-cover img {
+  min-height: 100% !important;
+  max-height: 100% !important;
+}
+
+.notion-page-cover-wrapper span,
+.notion-page-cover-wrapper img {
+  width: 100% !important;
+  height: 30vh !important;
+  min-height: 30vh !important;
+  max-height: 30vh !important;
+}
+
+.notion-page {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+}
+
+.notion-full-page {
+  padding-bottom: calc(max(10vh, 120px));
+}
+
+.notion-page-no-cover {
+  margin-top: 48px !important;
+  padding-top: 96px;
+}
+
+.notion-page-no-cover.notion-page-no-icon {
+  padding-top: 0;
+}
+
+.notion-page-no-cover.notion-page-has-image-icon {
+  padding-top: 148px;
+}
+
+.notion-page-has-cover.notion-page-no-icon {
+  padding-top: 48px;
+}
+
+.notion-page-has-cover {
+  padding-top: 96px;
+}
+
+.notion-page-has-cover.notion-page-has-icon.notion-page-has-text-icon {
+  padding-top: 64px;
+}
+
+.notion-page-icon-hero {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.notion-page-icon-hero.notion-page-icon-image {
+  width: 124px;
+  height: 124px;
+  margin-left: -62px;
+}
+
+.notion-page-icon-hero.notion-page-icon-span {
+  height: 78px;
+  width: 78px;
+  margin-left: -39px;
+}
+
+.notion-page-icon-hero .notion-page-icon {
+  position: relative;
+  display: block;
+}
+
+.notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image {
+  top: -62px;
+}
+
+.notion-page-has-cover .notion-page-icon-hero.notion-page-icon-span {
+  top: -42px;
+}
+
+.notion-page-icon-hero.notion-page-icon-span .notion-page-icon {
+  font-size: 78px;
+  line-height: 1.1;
+  margin-left: 0;
+  color: var(--fg-color-icon);
+}
+
+.notion-page-icon-hero.notion-page-icon-image .notion-page-icon {
+  display: block;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.notion-page-icon-hero.notion-page-icon-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.notion-page-icon {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji,
+    'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols;
+  font-size: 1.1em;
+  fill: var(--fg-color-6);
+  color: var(--fg-color-icon);
+}
+
+.notion-search .notion-page-icon {
+  fill: var(--fg-color-6);
+  color: var(--fg-color);
+}
+
+img.notion-page-icon,
+svg.notion-page-icon {
+  display: block;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 3px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.notion-page-icon-inline {
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  margin: 0 4px;
+}
+
+.notion-page-icon-inline span {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.notion-page-icon-inline img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.notion-page {
+  box-sizing: border-box;
+  width: var(--notion-max-width);
+  padding-left: calc(min(16px, 8vw));
+  padding-right: calc(min(16px, 8vw));
+}
+
+.notion-full-width {
+  box-sizing: border-box;
+  --notion-max-width: calc(min(1920px, 98vw));
+  padding-left: calc(min(96px, 8vw));
+  padding-right: calc(min(96px, 8vw));
+}
+
+.notion-small-text {
+  font-size: 14px;
+}
+
+.notion-quote {
+  display: block;
+  width: 100%;
+  white-space: non-wrap;
+  word-break: break-word;
+  border-left: 3px solid currentcolor;
+  padding: 0.2em 0.9em;
+  margin: 6px 0;
+  font-size: 1.2em;
+}
+
+.notion-hr {
+  width: 100%;
+  margin: 6px 0;
+  padding: 0;
+  border-top: 1px solid var(--fg-color-0);
+}
+
+.notion-link {
+  color: inherit;
+  word-break: break-word;
+  text-decoration: inherit;
+  border-bottom: 0.05em solid;
+  border-color: var(--fg-color-2);
+  opacity: 0.7;
+  transition: border-color 100ms ease-in, opacity 100ms ease-in;
+}
+
+.notion-link:hover {
+  border-color: var(--fg-color-6);
+  opacity: 1;
+}
+
+.notion-collection .notion-link {
+  opacity: 1;
+}
+
+.notion-blank {
+  width: 100%;
+  min-height: 1rem;
+  padding: 3px 2px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.notion-page-link {
+  display: flex;
+  color: var(--fg-color);
+  text-decoration: none;
+  width: 100%;
+  height: 30px;
+  margin: 1px 0;
+  transition: background 120ms ease-in 0s;
+}
+
+.notion-page-link:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-collection-card .notion-page-link {
+  height: unset;
+  margin: 0;
+  transition: unset;
+  background: unset;
+}
+
+.notion-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  color: var(--fg-color-icon);
+}
+
+.notion-page-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--fg-color-1);
+  margin: 4px 0;
+}
+
+.notion-inline-code {
+  color: #eb5757;
+  padding: 0.2em 0.4em;
+  background: var(--bg-color-2);
+  border-radius: 3px;
+  font-size: 85%;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+}
+
+.notion-inline-underscore {
+  text-decoration: underline;
+}
+
+.notion-list {
+  margin: 0;
+  -webkit-margin-before: 0.6em;
+          margin-block-start: 0.6em;
+  -webkit-margin-after: 0.6em;
+          margin-block-end: 0.6em;
+}
+
+.notion-list-disc {
+  list-style-type: disc;
+  -webkit-padding-start: 1.7em;
+          padding-inline-start: 1.7em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.notion-list-numbered {
+  list-style-type: decimal;
+  -webkit-padding-start: 1.6em;
+          padding-inline-start: 1.6em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.notion-list-disc li {
+  padding-left: 0.1em;
+}
+
+.notion-list-numbered li {
+  padding-left: 0.2em;
+}
+
+.notion-list li {
+  padding: 6px 0;
+  white-space: non-wrap;
+}
+
+.notion-asset-wrapper {
+  margin: 0.5rem 0;
+  max-width: 100vw;
+  min-width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.notion-asset-wrapper-image {
+  max-width: 100%;
+}
+
+.notion-asset-wrapper-full {
+  max-width: 100vw;
+}
+
+.notion-asset-wrapper img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.notion-asset-wrapper iframe {
+  border: none;
+  background: rgb(247, 246, 245);
+}
+
+.notion-text {
+  width: 100%;
+  white-space: non-wrap;
+  word-break: break-word;
+  padding: 3px 2px;
+  margin: 1px 0;
+}
+
+.notion-text:first-child {
+  margin-top: 2px;
+}
+
+.notion-text-children {
+  padding-left: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.notion .notion-code {
+  font-size: 85%;
+}
+
+.notion-code {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  margin: 4px 0;
+  border-radius: 3px;
+  -moz-tab-size: 2;
+    -o-tab-size: 2;
+       tab-size: 2;
+  display: block;
+  box-sizing: border-box;
+  overflow: auto;
+  background: var(--bg-color-1);
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+}
+
+.notion-code-copy {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 9;
+  transition: opacity 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.notion-code-copy-button {
+  display: inline-block;
+  padding: 0.6em;
+  font-size: 1.25em;
+  line-height: 1em;
+  cursor: pointer;
+
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1),
+    color 0.2s cubic-bezier(0.3, 0, 0.5, 1),
+    border-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-color: #f6f8fa;
+
+  color: #24292f;
+  border: 1px solid rgba(27, 31, 36, 0.15);
+  border-radius: 6px;
+}
+
+.notion-code-copy-button:hover {
+  background-color: #f3f4f6;
+  border-color: rgba(27, 31, 36, 0.15);
+  transition-duration: 0.1s;
+}
+
+.notion-code-copy-button:active {
+  background: hsla(220, 14%, 93%, 1);
+  border-color: rgba(27, 31, 36, 0.15);
+  transition: none;
+}
+
+.notion-code .notion-code-copy {
+  opacity: 0;
+}
+
+.notion-code:hover .notion-code-copy {
+  opacity: 1;
+}
+
+.notion-code-copy-button svg {
+  display: block;
+}
+
+.notion-code-copy-tooltip {
+  pointer-events: none;
+  position: absolute;
+  bottom: -38px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 99;
+  font-size: 14px;
+}
+
+.notion-code-copy-tooltip > div {
+  padding: 6px 8px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.notion-column {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.notion-column > *:first-child {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.notion-column > *:last-child {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.notion-row {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .notion-row {
+    flex-direction: column;
+  }
+
+  .notion-row .notion-column {
+    width: 100% !important;
+  }
+
+  .notion-row .notion-spacer {
+    display: none;
+  }
+}
+
+.notion-bookmark {
+  margin: 4px 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 1px solid var(--fg-color-1);
+  border-radius: 3px;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.dark-mode .notion-bookmark {
+  border-color: var(--bg-color-0);
+}
+
+.notion-bookmark > div:first-child {
+  flex: 4 1 180px;
+  padding: 12px 14px 14px;
+  overflow: hidden;
+  text-align: left;
+  color: var(--fg-color);
+}
+
+.notion-bookmark-title {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 24px;
+  margin-bottom: 2px;
+}
+
+.notion-bookmark-description {
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.8;
+  height: 32px;
+  overflow: hidden;
+}
+
+.notion-bookmark-link {
+  display: flex;
+  margin-top: 6px;
+}
+
+.notion-bookmark-link-icon {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-right: 6px;
+}
+
+.notion-bookmark-link-text {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--fg-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-bookmark-link-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.notion-bookmark-image {
+  flex: 1 1 180px;
+  position: relative;
+}
+
+.notion-bookmark-image > * {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+}
+
+.notion-bookmark-image span {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100%;
+}
+
+.notion-column .notion-bookmark-image {
+  display: none;
+}
+
+.notion-spacer {
+  width: calc(min(32px, 4vw));
+}
+
+.notion-spacer:last-child {
+  display: none;
+}
+
+.notion-asset-object-fit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+}
+
+.notion-image {
+  display: block;
+  width: 100%;
+  border-radius: 1px;
+}
+
+.notion-asset-caption {
+  padding: 6px 0 6px 2px;
+  white-space: non-wrap;
+  word-break: break-word;
+  caret-color: var(--fg-color);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--fg-color-3);
+}
+
+.notion-callout {
+  padding: 16px 16px 16px 12px;
+  display: inline-flex;
+  width: 100%;
+  border-radius: 3px;
+  border-width: 1px;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 4px 0;
+  border: 1px solid var(--fg-color-0);
+}
+
+.dark-mode .notion-callout {
+  border-color: var(--bg-color-2);
+}
+
+.notion-callout .notion-page-icon-inline {
+  align-self: flex-start;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 1.3em;
+}
+
+.notion-callout-text {
+  margin-left: 8px;
+  white-space: non-wrap;
+  word-break: break-word;
+  width: 100%;
+}
+
+.notion-toggle {
+  padding: 3px 2px;
+}
+
+.notion-toggle > summary {
+  cursor: pointer;
+  outline: none;
+}
+
+.notion-toggle > div {
+  margin-left: 1.1em;
+}
+
+.notion-collection {
+  align-self: center;
+  min-width: 100%;
+}
+
+.notion-collection-header {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 4px 2px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.notion-collection-header-title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25em;
+  line-height: 1.2;
+  font-weight: 600;
+  white-space: non-wrap;
+  word-break: break-word;
+  margin-right: 0.5em;
+}
+
+.notion-collection-view-dropdown {
+  cursor: pointer;
+  padding: 6px 8px;
+  border: 0 none;
+  border-radius: 3px;
+  transition: background 120ms ease-in 0s;
+  background: transparent;
+}
+
+.notion-collection-view-dropdown:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-collection-view-dropdown-icon {
+  position: relative;
+  top: 2px;
+  margin-left: 4px;
+}
+
+.notion-collection-view-type {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.notion-collection-view-type-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  /* fill: var(--fg-color); */
+  fill: rgba(55, 53, 47);
+  margin-right: 6px;
+}
+
+.notion-collection-view-type-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--fg-color);
+}
+
+.notion-table {
+  width: 100vw;
+  max-width: 100vw;
+  align-self: center;
+  overflow: auto hidden;
+}
+
+.notion-table-view {
+  position: relative;
+  float: left;
+  min-width: var(--notion-max-width);
+  padding-left: 0;
+  transition: padding 200ms ease-out;
+}
+
+.notion-table-header {
+  display: flex;
+  position: absolute;
+  z-index: 82;
+  height: 33px;
+  color: var(--fg-color-3);
+  min-width: var(--notion-max-width);
+}
+
+.notion-table-header-inner {
+  width: 100%;
+  display: inline-flex;
+  border-top: 1px solid var(--fg-color-1);
+  border-bottom: 1px solid var(--fg-color-1);
+  /* box-shadow: white -3px 0 0, rgba(55, 53, 47, 0.16) 0 1px 0; */
+}
+
+.notion-table-header-placeholder {
+  height: 34px;
+}
+
+.notion-table-th {
+  display: flex;
+  position: relative;
+}
+
+.notion-table-view-header-cell {
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden;
+  height: 32px;
+  font-size: 14px;
+  padding: 0;
+}
+
+.notion-table-view-header-cell-inner {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-right: 1px solid var(--fg-color-0);
+}
+
+.notion-table-th:last-child .notion-table-view-header-cell-inner {
+  border-right: 0 none;
+}
+
+.notion-collection-column-title {
+  display: flex;
+  align-items: center;
+  line-height: 120%;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.notion-collection-column-title-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  fill: var(--fg-color-2);
+  margin-right: 6px;
+}
+
+.notion-collection-column-title-body {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-table-body {
+  position: relative;
+  min-width: var(--notion-max-width);
+}
+
+.notion-table-row {
+  display: flex;
+  border-bottom: 1px solid var(--fg-color-1);
+}
+
+.notion-table-cell {
+  min-height: 32px;
+  padding: 5px 8px 6px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-word;
+  border-right: 1px solid var(--fg-color-1);
+}
+
+.notion-table-cell:last-child {
+  border-right: 0 none;
+}
+
+.notion-table-cell-title {
+  font-weight: 500;
+}
+
+.notion-table-cell-text {
+  white-space: non-wrap;
+}
+
+.notion-table-cell-text,
+.notion-table-cell-number,
+.notion-table-cell-url,
+.notion-table-cell-email,
+.notion-table-cell-phone_number {
+  line-height: 1.5;
+}
+
+.notion-table-cell-number {
+  white-space: non-wrap;
+}
+
+.notion-table-cell-select,
+.notion-table-cell-multi_select {
+  padding: 7px 8px 0;
+}
+
+.notion-property-select,
+.notion-property-multi_select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.notion-property-select-item,
+.notion-property-multi_select-item {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  border-radius: 3px;
+  height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 120%;
+}
+
+.notion-property-file {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.notion-property-file img {
+  max-height: 24px;
+  max-width: 100%;
+  margin-right: 6px;
+}
+
+.notion-collection-card-cover .notion-property-file {
+  height: 100%;
+}
+
+.notion-collection-card-cover .notion-property-file img {
+  width: 100%;
+  margin: 0;
+  max-height: 100%;
+}
+
+.notion-collection-card .notion-property-checkbox-container {
+  display: flex;
+}
+
+.notion-property-checkbox-text {
+  display: none;
+}
+
+.notion-collection-card .notion-property-checkbox-text {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.notion-property-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.notion-property-checkbox-checked {
+  width: 16px;
+  height: 16px;
+  background: var(--select-color-0);
+}
+
+.notion-property-checkbox-checked svg {
+  position: relative;
+  display: block;
+  /* top: -3px; */
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+.notion-property-checkbox-unchecked {
+  width: 16px;
+  height: 16px;
+  border: 1.3px solid var(--fg-color);
+}
+
+.notion-gallery {
+  align-self: center;
+}
+
+.notion-gallery-view {
+  position: relative;
+  padding-left: 0;
+  transition: padding 200ms ease-out;
+}
+
+.notion-gallery-grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  border-top: 1px solid var(--fg-color-1);
+  padding-top: 16px;
+  padding-bottom: 4px;
+}
+
+.notion-gallery-grid-size-small {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.notion-gallery-grid-size-large {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.notion-collection-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  text-decoration: none;
+  box-shadow: rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 2px 4px;
+  border-radius: 3px;
+  background: var(--bg-color);
+  color: var(--fg-color);
+  transition: background 100ms ease-out 0s;
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+  cursor: pointer;
+}
+
+.notion-collection-card:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-collection-card-cover {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  border-bottom: 1px solid var(--fg-color-0);
+  overflow: hidden;
+}
+
+.notion-collection-card-cover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1px 1px 0 0;
+  /* object-fit: cover; */
+}
+
+.notion-collection-card-cover .notion-collection-card-cover-empty {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--fg-color-5);
+  box-shadow: var(--fg-color-0) 0 -1px 0 0 inset;
+  padding: 8px 8px 0;
+}
+
+.notion-collection-card-size-small .notion-collection-card-cover {
+  height: 124px;
+}
+
+.notion-collection-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 10px;
+}
+
+.notion-collection-card-property {
+  padding: 4px 0;
+  white-space: nowrap;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.notion-collection-card-property:first-child {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.notion-collection-card-property:not(:first-child) {
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.notion-collection-card-property img {
+  max-height: 18px;
+}
+
+.notion-list-collection {
+  align-self: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.notion-list-view {
+  position: relative;
+  padding-left: 0;
+  transition: padding 200ms ease-out;
+  max-width: 100%;
+}
+
+.notion-list-body {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--fg-color-1);
+  padding-top: 8px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.notion-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  margin: 1px 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.notion-list-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.notion-list-item-body {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.notion-list-item-property {
+  /* display: flex;
+  align-items: center; */
+  margin-left: 14px;
+  font-size: 14px;
+}
+
+.notion-list-item-property .notion-property-date,
+.notion-list-item-property .notion-property-created_time,
+.notion-list-item-property .notion-property-last_edited_time,
+.notion-list-item-property .notion-property-url {
+  display: inline-block;
+  color: var(--fg-color-3);
+  font-size: 12px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-board {
+  width: 100vw;
+  max-width: 100vw;
+  align-self: center;
+  overflow: auto hidden;
+}
+
+.notion-board-view {
+  position: relative;
+  float: left;
+  min-width: 100%;
+  padding-left: 0;
+  transition: padding 200ms ease-out;
+}
+
+.notion-board-header {
+  display: flex;
+  position: absolute;
+  z-index: 82;
+  height: 44px;
+  min-width: 100%;
+}
+
+.notion-board-header-inner {
+  display: inline-flex;
+  border-top: 1px solid var(--fg-color-1);
+  border-bottom: 1px solid var(--fg-color-1);
+}
+
+.notion-board-header-placeholder {
+  height: var(--notion-header-height);
+}
+
+.notion-board-th {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-right: 16px;
+  box-sizing: content-box;
+  flex-shrink: 0;
+}
+
+.notion-board-th-body {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
+  padding-left: 2px;
+  padding-right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.notion-board-th-count {
+  color: var(--fg-color-3);
+  font-weight: 500;
+  padding: 0 8px;
+}
+
+.notion-board-th-empty {
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+}
+
+.notion-board-body {
+  display: inline-flex;
+}
+
+.notion-board-group {
+  flex: 0 0 auto;
+  padding-right: 16px;
+  box-sizing: content-box;
+}
+
+.notion-board-group-card {
+  margin-bottom: 8px;
+}
+
+.notion-board-view .notion-board-th,
+.notion-board-view .notion-board-group {
+  width: 260px;
+}
+
+.notion-board-view-size-small .notion-board-th,
+.notion-board-view-size-small .notion-board-group {
+  width: 180px;
+}
+
+.notion-board-view-size-large .notion-board-th,
+.notion-board-view-size-large .notion-board-group {
+  width: 320px;
+}
+
+.notion-board-view .notion-collection-card .notion-collection-card-cover {
+  height: 148px;
+}
+
+.notion-board-view-size-small
+  .notion-collection-card
+  .notion-collection-card-cover {
+  height: 100px;
+}
+
+.notion-board-view-size-large
+  .notion-collection-card
+  .notion-collection-card-cover {
+  height: 180px;
+}
+
+.notion-collection-page-properties {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: none;;
+}
+
+.notion-table-of-contents {
+  width: 100%;
+  margin: 4px 0;
+}
+
+.notion-table-of-contents-item {
+  color: var(--fg-color);
+  opacity: 0.7;
+  transition: background 100ms ease-in, opacity 100ms ease-in;
+
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: background 20ms ease-in 0s;
+  cursor: pointer;
+  width: 100%;
+
+  padding: 6px;
+  font-size: 14px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-table-of-contents-item:hover {
+  background: var(--bg-color-0);
+  opacity: 1;
+}
+
+.notion-table-of-contents-item-body {
+  border-bottom: 1px solid var(--fg-color-1);
+}
+
+.notion-to-do {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.notion-to-do-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 2px;
+  min-height: calc(1.5em + 3px + 3px);
+}
+
+.notion-to-do-children {
+  padding-left: 1.5em;
+}
+
+.notion-to-do-checked .notion-to-do-item {
+  text-decoration: line-through;
+  opacity: 0.375;
+}
+
+.notion-to-do-body {
+  white-space: non-wrap;
+  word-break: break-word;
+}
+
+.notion-to-do-item .notion-property-checkbox {
+  margin-right: 8px;
+}
+
+.notion-google-drive {
+  width: 100%;
+  align-self: center;
+  margin: 4px 0;
+}
+
+.notion-google-drive-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  border: 1px solid var(--fg-color-1);
+  border-radius: 3px;
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+  transition: background 20ms ease-in 0s;
+  cursor: pointer;
+}
+
+.notion-google-drive-link:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-google-drive-preview {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 55%;
+  overflow: hidden;
+}
+
+.notion-google-drive-preview img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
+.notion-google-drive-body {
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 14px 14px;
+  overflow: hidden;
+  border-top: 1px solid var(--fg-color-1);
+}
+
+.notion-google-drive-body-title {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.notion-google-drive-body-modified-time {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--fg-color-3);
+  max-height: 32px;
+  overflow: hidden;
+}
+
+.notion-google-drive-body-source {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.notion-google-drive-body-source-icon {
+  flex-shrink: 0;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.notion-google-drive-body-source-domain {
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-file {
+  width: 100%;
+  margin: 1px 0;
+}
+
+.notion-file-link {
+  display: flex;
+  align-items: center;
+  padding: 3px 2px;
+  border-radius: 3px;
+  transition: background 20ms ease-in 0s;
+  color: inherit;
+  text-decoration: none;
+}
+
+.notion-file-link:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-file-icon {
+  margin-right: 2px;
+  width: 1.35em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-height: calc(1.5em + 3px + 3px);
+  height: 1.35em;
+}
+
+.notion-file-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.notion-file-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-file-size {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--fg-color-3);
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 6px;
+}
+
+.notion-audio {
+  width: 100%;
+}
+
+.notion-audio audio {
+  width: 100%;
+}
+
+.notion-equation {
+  position: relative;
+  display: inline-flex;
+  color: inherit;
+  fill: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 3px;
+  transition: background 20ms ease-in 0s;
+}
+
+.notion-equation-inline {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
+}
+
+.notion-equation-block {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 4px 8px;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.notion-equation:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-equation:active,
+.notion-equation:focus {
+  background: var(--select-color-2);
+}
+
+.notion-frame .katex-display .katex {
+  padding-right: 32px;
+}
+
+.notion-frame .katex > .katex-html {
+  white-space: normal;
+}
+
+.notion-page-title {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  line-height: 1.3;
+  transition: background 120ms ease-in 0s;
+}
+
+.notion-page-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  width: 22px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.notion-page-title .notion-page-icon-inline {
+  margin-left: 2px;
+  margin-right: 6px;
+}
+
+.notion-collection-card-property .notion-link {
+  border-bottom: 0 none;
+}
+
+.notion-collection-card-property .notion-page-title {
+  transition: none;
+}
+
+.notion-collection-card-property .notion-page-title:hover {
+  background: unset;
+}
+
+.notion-collection-card-property .notion-page-title-icon {
+  margin-left: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.notion-collection-card-property .notion-page-title-text {
+  border-bottom: 0 none;
+}
+
+.notion-collection-card-property
+  .notion-property-relation
+  .notion-page-title-text {
+  border-bottom: 1px solid;
+}
+
+.notion-page-title-text {
+  position: relative;
+  top: 1px;
+  border-bottom: 1px solid var(--fg-color-1);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+/* removes double underline with links */
+
+.notion-link .notion-page-title-text {
+  border-bottom: 0 none;
+}
+
+.notion-collection-row {
+  width: 100%;
+  padding: 4px 0 8px;
+  border-bottom: 1px solid var(--fg-color-0);
+  margin-bottom: 1em;
+}
+
+.notion-collection-row-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notion-collection-row-property {
+  display: flex;
+  align-items: center;
+}
+
+.notion-collection-row-value {
+  flex: 1;
+  padding: 6px 8px 7px;
+  font-size: 14px;
+}
+
+.notion-collection-row-property .notion-collection-column-title {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 34px;
+  color: var(--fg-color-3);
+  padding: 0 6px;
+}
+
+.notion-collection-row-property .notion-property {
+  width: 100%;
+}
+
+.notion-collection-row-property .notion-collection-column-title-icon {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.notion-collection-row-property .notion-link {
+  border-bottom: 0 none;
+}
+
+.notion-collection-row-property
+  .notion-property-relation
+  .notion-page-title-text {
+  border-bottom: 1px solid;
+}
+
+.notion-user {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.notion-list-item-property .notion-property-multi_select-item {
+  margin-bottom: 0;
+  flex-wrap: none;
+}
+
+.notion-list-item-property .notion-property-multi_select-item:last-of-type {
+  margin-right: 0;
+}
+
+.notion-toggle .notion-collection-header,
+.notion-toggle .notion-table-view,
+.notion-toggle .notion-board-view,
+.notion-column .notion-collection-header,
+.notion-column .notion-table-view,
+.notion-column .notion-board-view {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.notion-toggle .notion-table,
+.notion-toggle .notion-board,
+.notion-column .notion-table,
+.notion-column .notion-board {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media only screen and (max-width: 730px) {
+  .notion-asset-wrapper {
+    max-width: 100%;
+  }
+
+  .notion-asset-wrapper-full {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .notion-bookmark-image {
+    display: none;
+  }
+}
+
+.lazy-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.lazy-image-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.lazy-image-preview {
+  filter: blur(20px);
+  transform: scale(1.1);
+
+  opacity: 1;
+  transition: opacity 400ms ease-in !important;
+  transition-delay: 100ms;
+  will-change: opacity;
+}
+
+.lazy-image-wrapper img.lazy-image-real {
+  position: relative;
+}
+
+.lazy-image-real {
+  opacity: 0;
+  transition: opacity 400ms ease-out !important;
+  will-change: opacity;
+}
+
+.lazy-image-real.medium-zoom-image {
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1),
+    opacity 400ms ease-out !important;
+  will-change: opacity, transform;
+}
+
+.medium-zoom-image--opened {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
+}
+
+/*
+  NOTE: if we hide the preview image, there's a weird bug with react hydration where
+  the image will sometimes flicker to show the background during initial page load.
+  So I'm removing this `opacity: 0` for now, but it will cause issues if the real
+  image is transparent.
+ */
+
+.lazy-image-loaded .lazy-image-preview {
+  opacity: 0;
+}
+
+.lazy-image-loaded .lazy-image-real {
+  opacity: 1;
+}
+
+.notion-page-cover.lazy-image-wrapper {
+  padding: 0 !important;
+}
+
+.notion-collection-card-cover .lazy-image-wrapper {
+  padding: 0 !important;
+  height: 100%;
+}
+
+.notion-page-cover .lazy-image-preview,
+.notion-page-cover .lazy-image-real {
+  will-change: unset !important;
+}
+
+.notion-page-cover .lazy-image-loaded .lazy-image-preview {
+  opacity: 1;
+}
+
+.notion-lite {
+  overflow-y: auto;
+}
+
+.notion-lite .notion-page {
+  width: 100%;
+  padding: 0;
+  /* padding: calc(max(2vmin, 8px)); */
+}
+
+.notion-lite .notion-collection-header,
+.notion-lite .notion-table-view,
+.notion-lite .notion-board-view {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.notion-lite .notion-board,
+.notion-lite .notion-table {
+  width: 100% !important;
+}
+
+.notion-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 200;
+
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  height: var(--notion-header-height);
+  min-height: var(--notion-header-height);
+
+  background: var(--bg-color);
+}
+
+.notion-header .notion-nav-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  line-height: 1.2;
+  font-size: 14px;
+  gap: 12px;
+}
+
+.notion-header .breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  flex-grow: 0;
+  min-width: 0;
+}
+
+.notion-header .breadcrumb {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: var(--fg-color);
+  text-decoration: none;
+  margin: 1px 0px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  transition: background 120ms ease-in 0s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notion-header .breadcrumb .notion-page-icon-inline {
+  font-size: 18px;
+  line-height: 1.1;
+  margin: 0 6px 0 0;
+}
+
+.notion-header .breadcrumb .notion-page-icon-span {
+  position: relative;
+  top: 1px;
+}
+
+.notion-header .searchIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--fg-color);
+  fill: var(--fg-color);
+}
+
+.notion-search-button {
+  gap: 8px;
+}
+
+.notion-header .breadcrumb:not(.active):hover {
+  background: var(--bg-color-0);
+}
+
+.notion-header .breadcrumb:not(.active):active {
+  background: var(--bg-color-1);
+}
+
+.notion-header .breadcrumb.active {
+  cursor: default;
+}
+
+.notion-header .spacer {
+  margin: 0 2px;
+  color: var(--fg-color-2);
+}
+
+.notion-header .button {
+  padding: 12px;
+}
+
+.notion-search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 15, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1001;
+}
+
+.notion-search {
+  box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 5px 10px, rgba(15, 15, 15, 0.2) 0px 15px 40px;
+  border-radius: 3px;
+  background: var(--bg-color);
+
+  position: relative;
+  top: 90px;
+  max-width: 600px;
+  min-height: 50px;
+  max-height: 80vh;
+  width: 75%;
+  overflow: hidden;
+  outline: none;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(55, 53, 47);
+  caret-color: rgb(55, 53, 47);
+  font-family: var(--notion-font);
+}
+
+.notion-search input {
+  background-color: var(--bg-color);
+}
+
+.notion-search .quickFindMenu {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-width: calc(100vw - 24px);
+  height: 100%;
+  max-height: 80vh;
+  min-height: 50px;
+}
+
+.notion-search .searchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 52px;
+  box-shadow: rgba(55, 53, 47, 0.09) 0px 1px 0px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 16px;
+}
+
+.notion-search .searchInput {
+  resize: none;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+  flex: 1;
+
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.notion-search .inlineIcon {
+  margin-right: 10px;
+  fill: var(--fg-color-2);
+}
+
+.notion-search .clearButton {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.notion-search .clearIcon {
+  width: 14px;
+  height: 14px;
+  fill: var(--fg-color-2);
+}
+
+.notion-search .clearButton:hover .clearIcon {
+  fill: var(--fg-color-3);
+}
+
+.notion-search .clearButton:active .clearIcon {
+  fill: var(--fg-color-6);
+}
+
+@-webkit-keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.notion-search .loadingIcon {
+  -webkit-animation: spinner 0.6s linear infinite;
+          animation: spinner 0.6s linear infinite;
+}
+
+.notion-search .noResultsPane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.notion-search .noResults {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(55, 53, 47, 0.6);
+}
+
+.notion-search .noResultsDetail {
+  font-size: 14px;
+  margin-top: 2px;
+  color: rgba(55, 53, 47, 0.4);
+}
+
+.notion-search .resultsFooter {
+  box-shadow: rgba(55, 53, 47, 0.09) 0px -1px 0px;
+  margin-top: 1px;
+  font-size: 12px;
+  min-height: 28px;
+  color: var(--fg-color-2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notion-search .resultsCount {
+  font-weight: 500;
+  color: var(--fg-color-3);
+}
+
+.notion-search .resultsPane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+}
+
+.notion-search .resultsPane .result {
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(55, 53, 47, 0.06);
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: var(--fg-color);
+  text-decoration: none;
+}
+
+.notion-search .resultsPane .result:hover {
+  background: var(--bg-color-2) !important;
+}
+
+.notion-search .resultsPane .result:active {
+  background: var(--fg-color-1) !important;
+}
+
+.notion-search .resultsPane .result {
+  min-height: unset;
+  height: unset;
+}
+
+.notion-search .resultsPane .result .notion-page-title {
+  display: flex;
+}
+
+.notion-search .resultsPane .result .notion-search-result-highlight {
+  font-size: 90%;
+  margin: 4px 0 0 30px;
+}
+
+.notion-sync-block {
+  width: 100%;
+}
+
+.notion-collection-group {
+  margin-bottom: 1em;
+}
+
+.notion-collection-group > summary {
+}
+
+.notion-collection-group > summary > div {
+  transform: scale(0.85);
+  transform-origin: 0% 50%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.notion-simple-table {
+  border: 1px solid var(--fg-color-1);
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.notion-simple-table.notion-simple-table-with-column-header tr:first-child td {
+  background: var(--bg-color-0);
+}
+
+.notion-simple-table.notion-simple-table-with-row-header tr td:first-child {
+  background: var(--bg-color-0);
+}
+
+.notion-simple-table td {
+  border: 1px solid var(--fg-color-1);
+  padding: 8px 8px;
+  white-space: non-wrap;
+}
+
+.notion-simple-table > tbody > tr > td {
+  width: auto;
+  min-width: 120px;
+  max-width: 240px;
+}
+
+.notion-external {
+  border-radius: 3px;
+  transition: background 120ms ease-in 0s;
+  text-decoration: none;
+}
+
+.notion-external:hover {
+  background: var(--bg-color-0);
+}
+
+.notion-external-block {
+  width: 100%;
+  margin-top: 4px;
+  border: 1px solid var(--fg-color-1);
+  padding: 6px 6px;
+  display: flex;
+}
+
+.notion-external-mention {
+  display: inline-flex;
+  padding: 0 4px;
+  align-items: center;
+  position: relative;
+  top: 3px;
+}
+
+.notion-external-image {
+  width: 32px;
+  height: 32px;
+  margin: 3px 12px 3px 4px;
+}
+
+.notion-external-mention .notion-external-image {
+  display: inline-flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 0.3em;
+}
+
+.notion-external-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.notion-external-mention .notion-external-description {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.notion-external-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg-color-4);
+}
+
+.notion-external-mention .notion-external-title {
+  display: inline;
+  font-size: 16px;
+  border-bottom: 0.05em solid var(--fg-color-1);
+}
+
+.notion-external-subtitle {
+  font-size: 12px;
+  color: var(--fg-color-3);
+}
+
+.notion-external-mention .notion-external-subtitle {
+  display: none;
+}
+
+.notion-yt-lite {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  contain: content;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.notion-yt-lite::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
+  background-position: top;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 60px;
+  padding-bottom: 50px;
+  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.notion-yt-lite > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.notion-yt-playbtn {
+  width: 68px;
+  height: 48px;
+  position: absolute;
+  cursor: pointer;
+  transform: translate3d(-50%, -50%, 0);
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  background-color: transparent;
+  /* YT's actual play button svg */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');
+  filter: grayscale(100%);
+  transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+  border: none;
+}
+
+.notion-yt-lite:hover > .notion-yt-playbtn,
+.notion-yt-youtube .notion-yt-playbtn:focus {
+  filter: none;
+}
+
+.notion-yt-initialized {
+  cursor: unset;
+}
+
+.notion-yt-initialized::before,
+.notion-yt-initialized > .notion-yt-playbtn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.notion-yt-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.notion-collection-view-dropdown-content {
+  font-family: var(--notion-font);
+  min-width: 220;
+  background: #fff;
+  border-radius: 6;
+  padding: 0;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}
+
+.notion-collection-view-dropdown-content-item {
+  all: unset;
+  position: relative;
+  height: 25px;
+  padding: 7px 96px 7px 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: rgb(55, 53, 47);
+  font-size: 14px;
+}
+
+.notion-collection-view-dropdown-content-item[data-disabled] {
+  color: #777;
+  pointer-events: none;
+  cursor: unset;
+}
+
+.notion-collection-view-dropdown-content-item:focus,
+.notion-collection-view-dropdown-content-item-active {
+  background-color: #ebfaff;
+}
+
+.notion-collection-view-dropdown-content-item-active-icon {
+  position: absolute;
+  right: 0;
+  width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notion-collection-view-dropdown-content-item-active-icon > svg {
+  width: 12px;
+}
+
+@-webkit-keyframes slideDownAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notion-collection-view-dropdown-content[data-state='open'] {
+  -webkit-animation-name: slideDownAndFade;
+          animation-name: slideDownAndFade;
+}
+
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}
+
+@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}
+
+@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}
+
+@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}
+
+@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}
+
+.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}
+
+.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}
+
+.katex .katex-version:after{content:"0.16.0"}
+
+.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}
+
+.katex .katex-html>.newline{display:block}
+
+.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}
+
+.katex .base,.katex .strut{display:inline-block}
+
+.katex .textbf{font-weight:700}
+
+.katex .textit{font-style:italic}
+
+.katex .textrm{font-family:KaTeX_Main}
+
+.katex .textsf{font-family:KaTeX_SansSerif}
+
+.katex .texttt{font-family:KaTeX_Typewriter}
+
+.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}
+
+.katex .mathit{font-family:KaTeX_Main;font-style:italic}
+
+.katex .mathrm{font-style:normal}
+
+.katex .mathbf{font-family:KaTeX_Main;font-weight:700}
+
+.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}
+
+.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}
+
+.katex .mathcal{font-family:KaTeX_Caligraphic}
+
+.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}
+
+.katex .mathtt{font-family:KaTeX_Typewriter}
+
+.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}
+
+.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}
+
+.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}
+
+.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}
+
+.katex .mainrm{font-family:KaTeX_Main;font-style:normal}
+
+.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}
+
+.katex .vlist-r{display:table-row}
+
+.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}
+
+.katex .vlist>span{display:block;height:0;position:relative}
+
+.katex .vlist>span>span{display:inline-block}
+
+.katex .vlist>span>.pstrut{overflow:hidden;width:0}
+
+.katex .vlist-t2{margin-right:-2px}
+
+.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}
+
+.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}
+
+.katex .hbox{width:100%}
+
+.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}
+
+.katex .thinbox{max-width:0;width:0}
+
+.katex .msupsub{text-align:left}
+
+.katex .mfrac>span>span{text-align:center}
+
+.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}
+
+.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}
+
+.katex .mspace{display:inline-block}
+
+.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}
+
+.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}
+
+.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}
+
+.katex .llap>.inner{right:0}
+
+.katex .clap>.inner,.katex .rlap>.inner{left:0}
+
+.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}
+
+.katex .rule{border:0 solid;display:inline-block;position:relative}
+
+.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}
+
+.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}
+
+.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}
+
+.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}
+
+.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}
+
+.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}
+
+.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}
+
+.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}
+
+.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}
+
+.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}
+
+.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}
+
+.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}
+
+.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}
+
+.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}
+
+.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}
+
+.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}
+
+.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}
+
+.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}
+
+.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}
+
+.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}
+
+.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}
+
+.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}
+
+.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}
+
+.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}
+
+.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}
+
+.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}
+
+.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}
+
+.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}
+
+.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}
+
+.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}
+
+.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}
+
+.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}
+
+.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}
+
+.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}
+
+.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}
+
+.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}
+
+.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}
+
+.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}
+
+.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}
+
+.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}
+
+.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}
+
+.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}
+
+.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}
+
+.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}
+
+.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}
+
+.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}
+
+.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}
+
+.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}
+
+.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}
+
+.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}
+
+.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}
+
+.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}
+
+.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}
+
+.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}
+
+.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}
+
+.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}
+
+.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}
+
+.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}
+
+.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}
+
+.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}
+
+.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}
+
+.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}
+
+.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}
+
+.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}
+
+.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}
+
+.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}
+
+.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}
+
+.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}
+
+.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}
+
+.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}
+
+.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}
+
+.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}
+
+.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}
+
+.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}
+
+.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}
+
+.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}
+
+.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}
+
+.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}
+
+.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}
+
+.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}
+
+.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}
+
+.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}
+
+.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}
+
+.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}
+
+.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}
+
+.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}
+
+.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}
+
+.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}
+
+.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}
+
+.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}
+
+.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}
+
+.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}
+
+.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}
+
+.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}
+
+.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}
+
+.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}
+
+.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}
+
+.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}
+
+.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}
+
+.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}
+
+.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}
+
+.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}
+
+.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}
+
+.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}
+
+.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}
+
+.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}
+
+.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}
+
+.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}
+
+.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}
+
+.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}
+
+.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}
+
+.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}
+
+.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}
+
+.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}
+
+.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}
+
+.katex .delimsizing.size1{font-family:KaTeX_Size1}
+
+.katex .delimsizing.size2{font-family:KaTeX_Size2}
+
+.katex .delimsizing.size3{font-family:KaTeX_Size3}
+
+.katex .delimsizing.size4{font-family:KaTeX_Size4}
+
+.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}
+
+.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}
+
+.katex .nulldelimiter{display:inline-block;width:.12em}
+
+.katex .delimcenter,.katex .op-symbol{position:relative}
+
+.katex .op-symbol.small-op{font-family:KaTeX_Size1}
+
+.katex .op-symbol.large-op{font-family:KaTeX_Size2}
+
+.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}
+
+.katex .accent .accent-body{position:relative}
+
+.katex .accent .accent-body:not(.accent-full){width:0}
+
+.katex .overlay{display:block}
+
+.katex .mtable .vertical-separator{display:inline-block;min-width:1px}
+
+.katex .mtable .arraycolsep{display:inline-block}
+
+.katex .mtable .col-align-c>.vlist-t{text-align:center}
+
+.katex .mtable .col-align-l>.vlist-t{text-align:left}
+
+.katex .mtable .col-align-r>.vlist-t{text-align:right}
+
+.katex .svg-align{text-align:left}
+
+.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}
+
+.katex svg path{stroke:none}
+
+.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}
+
+.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}
+
+.katex .stretchy:after,.katex .stretchy:before{content:""}
+
+.katex .hide-tail{overflow:hidden;position:relative;width:100%}
+
+.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}
+
+.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}
+
+.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}
+
+.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}
+
+.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}
+
+.katex .x-arrow-pad{padding:0 .5em}
+
+.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}
+
+.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}
+
+.katex .boxpad{padding:0 .3em}
+
+.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}
+
+.katex .cancel-pad{padding:0 .2em}
+
+.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}
+
+.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}
+
+.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}
+
+.katex .anglpad{padding:0 .03889em}
+
+.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}
+
+.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}
+
+.katex .mtr-glue{width:50%}
+
+.katex .cd-vert-arrow{display:inline-block;position:relative}
+
+.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}
+
+.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}
+
+.katex-display{display:block;margin:1em 0;text-align:center}
+
+.katex-display>.katex{display:block;text-align:center;white-space:nowrap}
+
+.katex-display>.katex>.katex-html{display:block;position:relative}
+
+.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}
+
+.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}
+
+.katex-display.fleqn>.katex{padding-left:2em;text-align:left}
+
+body{counter-reset:katexEqnNo mmlEqnNo}
+
+:root{--background:#282A36;--comment:#6272A4;--foreground:#F8F8F2;--selection:#44475A;--cyan:#8BE9FD;--green:#50FA7B;--orange:#FFB86C;--pink:#FF79C6;--purple:#BD93F9;--red:#FF5555;--yellow:#F1FA8C;--background-30:#282A3633;--comment-30:#6272A433;--foreground-30:#F8F8F233;--selection-30:#44475A33;--cyan-30:#8BE9FD33;--green-30:#50FA7B33;--orange-30:#FFB86C33;--pink-30:#FF79C633;--purple-30:#BD93F933;--red-30:#FF555533;--yellow-30:#F1FA8C33;--background-40:#282A3666;--comment-40:#6272A466;--foreground-40:#F8F8F266;--selection-40:#44475A66;--cyan-40:#8BE9FD66;--green-40:#50FA7B66;--orange-40:#FFB86C66;--pink-40:#FF79C666;--purple-40:#BD93F966;--red-40:#FF555566;--yellow-40:#F1FA8C66}
+
+pre::-webkit-scrollbar{width:14px}
+
+pre::-webkit-scrollbar-track{background-color:var(--comment);border-radius:0}
+
+pre::-webkit-scrollbar-thumb{background-color:var(--purple);border-radius:0}
+
+code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background-color:var(--selection)}
+
+code[class*=language-] ::-moz-selection, code[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection{text-shadow:none;background-color:var(--selection)}
+
+code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background-color:var(--selection)}
+
+pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}
+
+pre.line-numbers>code{position:relative;white-space:inherit}
+
+.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+
+.line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}
+
+.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}
+
+div.code-toolbar{position:relative}
+
+div.code-toolbar>.toolbar{position:absolute;top:.3em;right:.2em;transition:opacity .3s ease-in-out;opacity:0}
+
+div.code-toolbar:hover>.toolbar{opacity:1}
+
+div.code-toolbar>.toolbar .toolbar-item{display:inline-block;padding-right:20px}
+
+div.code-toolbar>.toolbar a{cursor:pointer}
+
+div.code-toolbar>.toolbar button{background:0 0;border:0;color:inherit;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
+
+div.code-toolbar>.toolbar a,div.code-toolbar>.toolbar button,div.code-toolbar>.toolbar span{color:var(--foreground);font-size:.8em;padding:.5em;background:var(--comment);border-radius:.5em}
+
+div.code-toolbar>.toolbar a:focus,div.code-toolbar>.toolbar a:hover,div.code-toolbar>.toolbar button:focus,div.code-toolbar>.toolbar button:hover,div.code-toolbar>.toolbar span:focus,div.code-toolbar>.toolbar span:hover{color:inherit;text-decoration:none;background-color:var(--green)}
+
+@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}
+
+code[class*=language-],pre[class*=language-]{color:var(--foreground);background:var(--background);text-shadow:none;font-family:PT Mono,Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}
+
+pre[class*=language-]{background:var(--background);border-radius:.5em;padding:1em;margin:.5em 0;overflow:auto;height:auto}
+
+:not(pre)>code[class*=language-],pre[class*=language-]{background:var(--background)}
+
+:not(pre)>code[class*=language-]{padding:4px 7px;border-radius:.3em;white-space:normal}
+
+.limit-300{height:400px!important}
+
+.limit-500{height:500px!important}
+
+.limit-600{height:600px!important}
+
+.limit-700{height:700px!important}
+
+.limit-800{height:800px!important}
+
+.language-css{color:var(--purple)}
+
+.token{color:var(--pink)}
+
+.language-css .token{color:var(--pink)}
+
+.token.script{color:var(--foreground)}
+
+.token.bold{font-weight:700}
+
+.token.italic{font-style:italic}
+
+.token.atrule,.token.attr-name,.token.attr-value{color:var(--green)}
+
+.language-css .token.atrule{color:var(--purple)}
+
+.language-html .token.attr-value,.language-markup .token.attr-value{color:var(--yellow)}
+
+.token.boolean{color:var(--purple)}
+
+.token.builtin,.token.class-name{color:var(--cyan)}
+
+.token.comment{color:var(--comment)}
+
+.token.constant{color:var(--purple)}
+
+.language-javascript .token.constant{color:var(--orange);font-style:italic}
+
+.token.entity{color:var(--pink)}
+
+.language-css .token.entity{color:var(--green)}
+
+.language-html .token.entity.named-entity{color:var(--purple)}
+
+.language-html .token.entity:not(.named-entity){color:var(--pink)}
+
+.language-markup .token.entity.named-entity{color:var(--purple)}
+
+.language-markup .token.entity:not(.named-entity){color:var(--pink)}
+
+.token.function{color:var(--green)}
+
+.language-css .token.function{color:var(--cyan)}
+
+.token.important,.token.keyword{color:var(--pink)}
+
+.token.prolog{color:var(--foreground)}
+
+.token.property{color:var(--orange)}
+
+.language-css .token.property{color:var(--cyan)}
+
+.token.punctuation{color:var(--pink)}
+
+.language-css .token.punctuation{color:var(--orange)}
+
+.language-html .token.punctuation,.language-markup .token.punctuation{color:var(--foreground)}
+
+.token.selector{color:var(--pink)}
+
+.language-css .token.selector{color:var(--green)}
+
+.token.regex{color:var(--red)}
+
+.language-css .token.rule:not(.atrule){color:var(--foreground)}
+
+.token.string{color:var(--yellow)}
+
+.token.tag{color:var(--pink)}
+
+.token.url{color:var(--cyan)}
+
+.language-css .token.url{color:var(--orange)}
+
+.token.variable{color:var(--comment)}
+
+.token.number{color:rgba(189,147,249,1)}
+
+.token.operator{color:rgba(139,233,253,1)}
+
+.token.char{color:rgba(255,135,157,1)}
+
+.token.symbol{color:rgba(255,184,108,1)}
+
+.token.deleted{color:#e2777a}
+
+.token.namespace{color:#e2777a}
+
+.highlight-line{color:inherit;display:inline-block;text-decoration:none;border-radius:4px;padding:2px 10px}
+
+.highlight-line:empty:before{content:" "}
+
+.highlight-line:not(:last-child){min-width:100%}
+
+.highlight-line .highlight-line:not(:last-child){min-width:0}
+
+.highlight-line-isdir{color:var(--foreground);background-color:var(--selection-30)}
+
+.highlight-line-active{background-color:var(--comment-30)}
+
+.highlight-line-add{background-color:var(--green-30)}
+
+.highlight-line-remove{background-color:var(--red-30)}
+
+.notion-asset-wrapper-image img {
+  border-radius: 0.5rem !important;
+}
+
+.notion-collection {
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+.notion-table,
+.notion-board {
+  width: 100% !important;
+  overflow: auto !important;
+}
+
+.notion-collection-header,
+.notion-table-view,
+.notion-board-view {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.notion-board-th-body > span {
+  display: flex !important;
+  align-items: baseline !important;
+}
+
+.notion-code {
+  background-color: var(--background) !important;
+}
+
+.notion-asset-wrapper iframe {
+  background: transparent !important;
+}
+
+/* .notion-to-do-item {
+  align-items: flex-start !important;
+} */
+
+.notion .notion-inline-code-red,
+.notion-red_co .notion-inline-code {
+  color: var(--notion-red) !important;
+}
+
+.notion-pink .notion-inline-code,
+.notion-pink_co .notion-inline-code {
+  color: var(--notion-pink) !important;
+}
+
+.notion-blue .notion-inline-code,
+.notion-blue_co .notion-inline-code {
+  color: var(--notion-blue) !important;
+}
+
+.notion-purple .notion-inline-code,
+.notion-purple_co .notion-inline-code {
+  color: var(--notion-purple) !important;
+}
+
+.notion-teal .notion-inline-code,
+.notion-teal_co .notion-inline-code {
+  color: var(--notion-teal) !important;
+}
+
+.notion-yellow .notion-inline-code,
+.notion-yellow_co .notion-inline-code {
+  color: var(--notion-yellow) !important;
+}
+
+.notion-orange .notion-inline-code,
+.notion-orange_co .notion-inline-code {
+  color: var(--notion-orange) !important;
+}
+
+.notion-brown .notion-inline-code,
+.notion-brown_co .notion-inline-code {
+  color: var(--notion-brown) !important;
+}
+
+.notion-gray .notion-inline-code,
+.notion-gray_co .notion-inline-code {
+  color: var(--notion-gray) !important;
+}
+
+.notion-list-numbered > .notion-list-numbered {
+  list-style-type: lower-alpha;
+}
+
+.notion-list-numbered > .notion-list-numbered > .notion-list-numbered {
+  list-style-type: lower-roman;
+}
+
+.notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered {
+  list-style-type: decimal;
+}
+
+.notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered {
+  list-style-type: lower-alpha;
+}
+
+.notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered {
+  list-style-type: lower-roman;
+}
+
+.notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered {
+  list-style-type: decimal;
+}
+
+.notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered {
+  list-style-type: lower-alpha;
+}
+
+.notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered
+  > .notion-list-numbered {
+  list-style-type: lower-roman;
+}
+
+.notion-property-text {
+  white-space: non-wrap !important;
+}
