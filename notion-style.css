@@ -876,6 +876,11 @@ svg.notion-page-icon {
   background: rgb(247, 246, 245);
 }
 
+.notion-asset-wrapper.notion-asset-wrapper-image div {
+  height: auto !important;
+}
+
+
 .notion-text {
   width: 100%;
   white-space: non-wrap;
